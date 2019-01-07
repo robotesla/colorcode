@@ -2,7 +2,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-from qcodeedit import QCodeEdit
+from widgets.codeedit import QCodeEdit
 
 __resourcesDirectory__ = 'resources/'
 

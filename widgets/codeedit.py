@@ -14,12 +14,7 @@ class QCodeEdit(QTextEdit):
 
         self._completer = None
         self.lastItems = []
-
-        self.setPlainText(
-                "This TextEdit provides autocompletions for words that have "
-                "more than 3 characters. You can trigger autocompletion "
-                "using %s" % QKeySequence("Ctrl+E").toString(
-                        QKeySequence.NativeText))
+        
         font = QFont()
         font.setFamily('Menlo' if platform() == 'Darwin' else ('Consoleas' if platform() == 'Windows' else 'Courier'))
         font.setFixedPitch(True)
@@ -31,7 +26,7 @@ class QCodeEdit(QTextEdit):
         self.setTabStopDistance(35)
         self.setPlainText('from matrix import *\n\nclass MyApp(App):\n\tdef setup(self):\n\t\tpass\n\n\tdef frame(self):\n\t\tpass\n\n\tdef on_button(self, button):\n\t\tpass')
 
-        from highlight import PythonHighlighter
+        from widgets.highlight import PythonHighlighter
         self.highlighter = PythonHighlighter(self.document())
 
         self.completionsTimer = QTimer(self, interval=750, timeout=self.makeCompletions)
