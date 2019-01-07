@@ -33,7 +33,7 @@ class QCodeEdit(QTextEdit):
 
         # uncomment to use autocomplete
         # but, now it's very unstable
-        self.completionsTimer.start()
+        # self.completionsTimer.start()
 
     def setCompleter(self, c):
         if self._completer is not None:
