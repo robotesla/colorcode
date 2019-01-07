@@ -42,6 +42,7 @@ class MainWindow(QMainWindow):
         self.tips.setStyleSheet('color: #ccc; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
         model = QStandardItemModel()
         self.tips.setModel(model)
+        self.tips.setVisible(False)
 
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')

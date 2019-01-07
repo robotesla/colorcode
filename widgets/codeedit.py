@@ -33,7 +33,7 @@ class QCodeEdit(QTextEdit):
 
         # uncomment to use autocomplete
         # but, now it's very unstable
-        # self.completionsTimer.start()
+        self.completionsTimer.start()
 
     def setCompleter(self, c):
         if self._completer is not None:
@@ -48,16 +48,14 @@ class QCodeEdit(QTextEdit):
 
     def makeCompletions(self):
         currentLineNumber = self.textCursor().blockNumber()
-        currentLine = self.toPlainText().splitlines()[currentLineNumber]
         if self.toPlainText().replace('\t', '').replace(' ', '').replace('\n', '') == '': return 
-        try:
-            items = [i.name for i in Script(source=self.toPlainText(), line=currentLineNumber + 1, column=self.textCursor().columnNumber()).completions()]
+        
+        try: items = [i.name for i in Script(source=self.toPlainText(), line=currentLineNumber + 1, column=self.textCursor().columnNumber()).completions()]
         except ValueError: return 
+        
         if self.lastItems == items: return
         self._completer.setModel(QStringListModel(items, self._completer))
         self.lastItems = items
-        from time import time
-        print(time())
 
     def completer(self):
         return self._completer
