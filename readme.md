@@ -5,7 +5,7 @@ Pretty looking IDE for Betaboard development and deploying your applications in 
 
 ## Requirements
 
-- Python: 3.6
+- Python: [3.6.7](https://www.python.org/downloads/release/python-367/)
 - Pip
 - PySide2
 - Jedi
