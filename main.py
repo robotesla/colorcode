@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')
         
-        styleSheet = 'color: white; background: #353535; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;'
+        styleSheet = 'color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;'
         self.menuBar().setStyleSheet(styleSheet)
         
         fileMenu = self.menuBar().addMenu('File')
@@ -119,12 +119,10 @@ if __name__ == '__main__':
     app = QApplication([])
 
     from qtmodern.styles import dark
-    from qtmodern.windows import ModernWindow
     dark(app)
-
+    
     window = MainWindow()
-    mw = ModernWindow(window)
     window.setMinimumSize(640, 512)
-    mw.show()
+    window.show()
     app.exec_()
     
