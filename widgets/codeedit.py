@@ -21,7 +21,7 @@ class QCodeEdit(QTextEdit):
         font.setPointSize(13 if platform() == 'Darwin' else 10)
 
         self.setFont(font)
-        self.setStyleSheet('color: #ccc; padding: 10px; background: #1E1E1E; border-radius: 0px')
+        self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
         self.setPlaceholderText('Maybe, you should write a couple of lines of code here...')
         self.setTabStopDistance(35)
         self.setPlainText('from matrix import *\n\nclass MyApp(App):\n\tdef setup(self):\n\t\tpass\n\n\tdef frame(self):\n\t\tpass\n\n\tdef on_button(self, button):\n\t\tpass')

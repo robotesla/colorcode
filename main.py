@@ -39,14 +39,14 @@ class MainWindow(QMainWindow):
     def setupTipsList(self):
         self.statusBar().showMessage('Setting-up tips list...')
         self.tips = QListView()
-        self.tips.setStyleSheet('color: #ccc; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
+        self.tips.setStyleSheet('color: white; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
         model = QStandardItemModel()
         self.tips.setModel(model)
         self.tips.setVisible(False)
 
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')
-        self.menuBar().setStyleSheet('color: #ccc; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;')
+        self.menuBar().setStyleSheet('color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;')
         fileMenu = self.menuBar().addMenu('File')
         fileMenu.addAction('Save')
         
@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
         self.splitter.addWidget(self.tips)
 
     def setupStatusbar(self):
-        self.statusBar().setStyleSheet('color: #ccc; spacing: 15px; background: #A700C5; border-radius: 0px;')
+        self.statusBar().setStyleSheet('color: white; spacing: 15px; background: #A700C5; border-radius: 0px;')
         self.statusBar().showMessage('Waiting...')
 
     def setupUI(self):
