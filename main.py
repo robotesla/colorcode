@@ -47,8 +47,9 @@ class MainWindow(QMainWindow):
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')
         self.menuBar().setStyleSheet('color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;')
+        
         fileMenu = self.menuBar().addMenu('File')
-        fileMenu.addAction('Save')
+        fileMenu.addAction('In development').setEnabled(False)
         
         editMenu = self.menuBar().addMenu('Edit')
         editMenu.addAction('Undo', lambda: self.editor.undo(), 'Ctrl+Z')
