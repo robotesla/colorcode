@@ -3,6 +3,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from widgets.codeedit import QCodeEdit
+from windows.settings import PreferencesWindow
 
 __resourcesDirectory__ = 'resources/'
 
@@ -49,7 +50,7 @@ class MainWindow(QMainWindow):
         self.menuBar().setStyleSheet('color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;')
         
         fileMenu = self.menuBar().addMenu('File')
-        fileMenu.addAction('In development').setEnabled(False)
+        fileMenu.addAction('Preferences', lambda: PreferencesWindow(self).showNormal())
         
         editMenu = self.menuBar().addMenu('Edit')
         editMenu.addAction('Undo', lambda: self.editor.undo(), 'Ctrl+Z')
