@@ -107,6 +107,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.splitter)
         self.statusBar().showMessage('All set!')
         self.setWindowTitle(QCoreApplication.applicationName())
+        self.setUnifiedTitleAndToolBarOnMac(True)
 
 if __name__ == '__main__':
     QCoreApplication.setApplicationName('Prettycode')
