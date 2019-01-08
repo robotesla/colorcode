@@ -62,10 +62,20 @@ class MainWindow(QMainWindow):
         selectionMenu = self.menuBar().addMenu('Selection')
         selectionMenu.addAction('Select All', lambda: self.editor.selectAll(), 'Ctrl+A')
 
+        formatMenu = self.menuBar().addMenu('Format')
+        fontFormatMenu = formatMenu.addMenu('Font')
+        fontFormatMenu.addAction('Zoom In', lambda: self.editor.zoomIn(), 'Ctrl++')
+        fontFormatMenu.addAction('Zoom Out', lambda: self.editor.zoomOut(), 'Ctrl+-')
+
         viewMenu = self.menuBar().addMenu('View')
         viewMenu.addAction('Toggle Toolbar', lambda: self.toolbar.setVisible(not self.toolbar.isVisible()), 'Ctrl+B')
         viewMenu.addAction('Toggle Tips Panel', lambda: self.tips.setVisible(not self.tips.isVisible()), 'Ctrl+J')
         viewMenu.addAction('Toggle Statusbar', lambda: self.statusBar().setVisible(not self.statusBar().isVisible()), 'Ctrl+M')
+
+        windowMenu = self.menuBar().addMenu('Window')
+        windowMenu.addAction('Minimize', lambda: self.showMinimized(), 'Ctrl+M')
+        windowMenu.addAction('Zoom', lambda: self.showMaximized())
+        
 
         helpMenu = self.menuBar().addMenu('Help')
         helpMenu.addAction('About ' + QCoreApplication.applicationName(), lambda: QMessageBox.about(self, 'About ' + QCoreApplication.applicationName(), 'Pretty development IDE.\nVersion: ' + QCoreApplication.applicationVersion()))
