@@ -48,7 +48,9 @@ class MainWindow(QMainWindow):
 
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')
-        self.menuBar().setStyleSheet('color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;')
+        
+        styleSheet = 'color: white; background: #353535; border-radius: 0px; min-height: 25px; spacing: 18px; selection-background-color: #37373D;'
+        self.menuBar().setStyleSheet(styleSheet)
         
         fileMenu = self.menuBar().addMenu('File')
         fileMenu.addAction('Preferences', lambda: PreferencesWindow(self).showNormal())
@@ -114,9 +116,15 @@ if __name__ == '__main__':
     QCoreApplication.setOrganizationDomain('ketsu8')
     QCoreApplication.setOrganizationName('Ketsu8')
     QCoreApplication.setApplicationVersion('dev0')
-
     app = QApplication([])
+
+    from qtmodern.styles import dark
+    from qtmodern.windows import ModernWindow
+    dark(app)
+
     window = MainWindow()
+    mw = ModernWindow(window)
     window.setMinimumSize(640, 512)
-    window.show()
+    mw.show()
     app.exec_()
+    
