@@ -1,3 +1,3 @@
 pyside2
 jedi
-qdarkstyle
+qtmodern
