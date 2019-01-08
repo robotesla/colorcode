@@ -68,5 +68,5 @@ class PreferencesWindow(QDialog):
         self.setupDialogButtonBox()
         self.setupLayout()
 
-        self.setFixedSize(400, 600)
+        self.setFixedSize(400, 400)
         self.setWindowTitle('Preferences')
