@@ -24,7 +24,7 @@ class QCodeEdit(QTextEdit):
         self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
         self.setPlaceholderText('Maybe, you should write a couple of lines of code here...')
         self.setTabStopDistance(35)
-        self.setPlainText('from matrix import *\n\nclass MyApp(App):\n\tdef setup(self):\n\t\tpass\n\n\tdef frame(self):\n\t\tpass\n\n\tdef on_button(self, button):\n\t\tpass')
+        self.setPlainText('from matrix import *\n\ndef setup():\n\tpass\n\ndef frame():\n\tpass\n\ndef on_button(button):\n\tpass')
 
         from widgets.highlight import PythonHighlighter
         self.highlighter = PythonHighlighter(self.document())
