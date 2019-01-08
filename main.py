@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
 
     def setupEditor(self):
         self.editor = QCodeEdit()
-        self.editor.cursorPositionChanged.connect(lambda: self.lineStatusLabel.setText('Ln <b>' + str(self.editor.textCursor().blockNumber() + 1) + '</b>, Col <b>' + str(self.editor.textCursor().columnNumber()) + '</b>'))
+        self.editor.cursorPositionChanged.connect(lambda: self.lineStatusLabel.setText('Ln <b>' + str(self.editor.textCursor().blockNumber() + 1) + '</b>, Col <b>' + str(self.editor.textCursor().columnNumber() + 1) + '</b>'))
     
     def setupCompleter(self):
         self.statusBar().showMessage('Setting-up completer...')
@@ -93,7 +93,7 @@ class MainWindow(QMainWindow):
 
     def setupStatusbar(self):
         self.statusBar().setStyleSheet('color: white; spacing: 15px; background: #A700C5; border-radius: 0px;')
-        self.lineStatusLabel = QLabel('Ln <b>1</b>, Col <b>0</b>')
+        self.lineStatusLabel = QLabel('Ln <b>1</b>, Col <b>1</b>')
         self.statusBar().addPermanentWidget(self.lineStatusLabel)
 
     def setupUI(self):
