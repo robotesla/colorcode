@@ -36,13 +36,13 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(QIcon(__resourcesDirectory__ + 'icons/open.png'), 'Open Project')
         self.toolbar.addAction(QIcon(__resourcesDirectory__ + 'icons/save.png'), 'Save Project')
 
-    def setupTipsList(self):
-        self.statusBar().showMessage('Setting-up tips list...')
-        self.tips = QListView()
-        self.tips.setStyleSheet('color: white; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
+    def setupButtomPanel(self):
+        self.statusBar().showMessage('Setting-up buttom panel...')
+        self.buttomPanel = QListView()
+        self.buttomPanel.setStyleSheet('color: white; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
         model = QStandardItemModel()
-        self.tips.setModel(model)
-        self.tips.setVisible(False)
+        self.buttomPanel.setModel(model)
+        self.buttomPanel.setVisible(False)
 
     def setupMenubar(self):
         self.statusBar().showMessage('Setting-up menubar...')
@@ -70,7 +70,7 @@ class MainWindow(QMainWindow):
 
         viewMenu = self.menuBar().addMenu('View')
         viewMenu.addAction('Toggle Toolbar', lambda: self.toolbar.setVisible(not self.toolbar.isVisible()), 'Ctrl+B')
-        viewMenu.addAction('Toggle Tips Panel', lambda: self.tips.setVisible(not self.tips.isVisible()), 'Ctrl+J')
+        viewMenu.addAction('Toggle Buttom Panel', lambda: self.buttomPanel.setVisible(not self.buttomPanel.isVisible()), 'Ctrl+J')
         viewMenu.addAction('Toggle Statusbar', lambda: self.statusBar().setVisible(not self.statusBar().isVisible()), 'Ctrl+M')
 
         windowMenu = self.menuBar().addMenu('Window')
@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
         self.splitter.setStyleSheet('background: #252526; border-radius: 0px;')
         self.splitter.setOrientation(Qt.Orientation.Vertical)
         self.splitter.addWidget(self.editor)
-        self.splitter.addWidget(self.tips)
+        self.splitter.addWidget(self.buttomPanel)
 
     def setupStatusbar(self):
         self.statusBar().setStyleSheet('color: white; spacing: 15px; background: #A700C5; border-radius: 0px;')
@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
         self.setupStatusbar()
         self.setupEditor()
         self.setupToolbar()
-        self.setupTipsList()
+        self.setupButtomPanel()
         self.setupMenubar()
         self.setupCompleter()
         self.setupSplitter()
