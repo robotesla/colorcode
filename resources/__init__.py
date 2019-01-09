@@ -1,0 +1,1 @@
+__resourcesDirectory__ = 'resources/'

@@ -4,8 +4,7 @@ from PySide2.QtWidgets import *
 
 from widgets.codeedit import QCodeEdit
 from windows.settings import PreferencesWindow
-
-__resourcesDirectory__ = 'resources/'
+from resources import __resourcesDirectory__
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -118,9 +117,12 @@ if __name__ == '__main__':
     QCoreApplication.setApplicationVersion('0.0.1a')
     app = QApplication([])
 
+    from warnings import filterwarnings
+    filterwarnings('ignore')
+
     from qtmodern.styles import dark
     dark(app)
-
+    
     splashPicture = QPixmap(__resourcesDirectory__ + 'splash.png')
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
     splashScreen.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
@@ -131,7 +133,6 @@ if __name__ == '__main__':
     progressBar.setTextVisible(False)
     progressBar.setGeometry(160, 250, 200, 20)
     splashScreen.showMessage('Version: <b>' + QCoreApplication.applicationVersion() + '</b>', Qt.AlignBottom | Qt.AlignRight, Qt.white)
-    
     splashScreen.show()
 
     from time import time
@@ -140,7 +141,7 @@ if __name__ == '__main__':
         t = time()
         while time() < t + 0.2:
             app.processEvents()
-
+    
     window = MainWindow()
     window.setMinimumSize(640, 512)
     window.show()

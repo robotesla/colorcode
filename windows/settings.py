@@ -1,6 +1,7 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+from resources import __resourcesDirectory__
 
 class PreferencesWindow(QDialog):
     def __init__(self, parent=None):
@@ -10,21 +11,31 @@ class PreferencesWindow(QDialog):
     def setupTabWidget(self):
         self.tabWidget = QTabWidget()
 
-        generalWidget = QWidget()
-        generalWidget.setLayout(QVBoxLayout())
-        generalWidget.layout().addStretch(1)
-        generalWidget.layout().setSpacing(20)
+        interfaceWidget = QWidget()
+        interfaceWidget.setLayout(QVBoxLayout())
+        interfaceWidget.layout().addStretch(1)
 
         self.toolbarCheck = QCheckBox('Visible Toolbar')
-        self.buttomPanelCheck = QCheckBox('Visible Buttom Panel')
-        self.statusBarCheck = QCheckBox('Visible Status Bar')
-        self.autoCompleteCheck = QCheckBox('Enable Auto Complete (Beta)')
-        generalWidget.layout().addWidget(self.toolbarCheck)
-        generalWidget.layout().addWidget(self.buttomPanelCheck)
-        generalWidget.layout().addWidget(self.statusBarCheck)
-        generalWidget.layout().addWidget(self.autoCompleteCheck)
+        interfaceWidget.layout().addWidget(self.toolbarCheck)
 
-        self.tabWidget.addTab(generalWidget, 'General')
+        self.buttomPanelCheck = QCheckBox('Visible Buttom Panel')
+        interfaceWidget.layout().addWidget(self.buttomPanelCheck)
+
+        self.statusBarCheck = QCheckBox('Visible Status Bar')
+        interfaceWidget.layout().addWidget(self.statusBarCheck)
+
+        self.autoCompleteCheck = QCheckBox('Enable Auto Complete (Beta)')
+        interfaceWidget.layout().addWidget(self.autoCompleteCheck)
+
+        self.languageBox = QComboBox()
+
+        from resources.languages import languagesList, languageData
+        [self.languageBox.addItem(languageData(language)['title']) for language in languagesList()]
+
+        interfaceWidget.layout().addWidget(QLabel('Language:'))
+        interfaceWidget.layout().addWidget(self.languageBox)
+
+        self.tabWidget.addTab(interfaceWidget, 'Interface')
 
         personalWidget = QWidget()
         personalWidget.setLayout(QVBoxLayout())
