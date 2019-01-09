@@ -28,9 +28,9 @@ class PreferencesWindow(QDialog):
         interfaceWidget.layout().addWidget(self.autoCompleteCheck)
 
         self.languageBox = QComboBox()
-
-        from resources.languages import languagesList, languageData
-        [self.languageBox.addItem(languageData(language)['title']) for language in languagesList()]
+        
+        from translations import languages
+        self.languageBox.addItems(languages)
 
         interfaceWidget.layout().addWidget(QLabel('Language:'))
         interfaceWidget.layout().addWidget(self.languageBox)

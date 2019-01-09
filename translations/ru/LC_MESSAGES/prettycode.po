@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: prettycode\n"
+"Language: ru\n"
+
+#: main.py:18
+msgid "Ln {line}, Col {column}"
+msgstr "Строка {line}, Столбец {column}"
+
+#: main.py:21
+msgid "Setting-up completer..."
+msgstr "Настройка авто-подсказок..."
+
+#: main.py:30
+msgid "Setting-up toolbar..."
+msgstr "Настройка панели инструментов..."
+
+#: main.py:36
+msgid "Build and Run"
+msgstr "Собрать и запустить"
+
+#: main.py:37
+msgid "Build in package"
+msgstr "Собрать пакет"
+
+#: main.py:38
+msgid "Project Settings"
+msgstr "Настройки проекта"
+
+#: main.py:39
+msgid "Open Project"
+msgstr "Открыть проект"
+
+#: main.py:40
+msgid "Save Project"
+msgstr "Сохранить проект"
+
+#: main.py:43
+msgid "Setting-up buttom panel..."
+msgstr "Настройка нижней панели..."
+
+#: main.py:51
+msgid "Setting-up menubar..."
+msgstr "Настройка меню..."
+
+#: main.py:56
+msgid "File"
+msgstr "Файл"
+
+#: main.py:57
+msgid "Preferences"
+msgstr "Параметры"
+
+#: main.py:59
+msgid "Edit"
+msgstr "Правка"
+
+#: main.py:60
+msgid "Undo"
+msgstr "Undo"
+
+#: main.py:61
+msgid "Redo"
+msgstr "Redo"
+
+#: main.py:63
+msgid "Cut"
+msgstr "Вырезать"
+
+#: main.py:64
+msgid "Copy"
+msgstr "Копировать"
+
+#: main.py:65
+msgid "Paste"
+msgstr "Вставить"
+
+#: main.py:67
+msgid "Selection"
+msgstr "Выделение"
+
+#: main.py:68
+msgid "Select All"
+msgstr "Выделить все"
+
+#: main.py:70
+msgid "Format"
+msgstr "Формат"
+
+#: main.py:71
+msgid "Font"
+msgstr "Шрифт"
+
+#: main.py:72
+msgid "Zoom In"
+msgstr "Приблизить"
+
+#: main.py:73
+msgid "Zoom Out"
+msgstr "Уменьшить"
+
+#: main.py:75
+msgid "View"
+msgstr "Посмотреть"
+
+#: main.py:76
+msgid "Toggle Toolbar"
+msgstr "Вкл/Выкл панель инструментов"
+
+#: main.py:77
+msgid "Toggle Buttom Panel"
+msgstr "Вкл/Выкл нижнюю панель"
+
+#: main.py:78
+msgid "Toggle Statusbar"
+msgstr "Переключить статусбар"
+
+#: main.py:80
+msgid "Window"
+msgstr "Окно"
+
+#: main.py:81
+msgid "Minimize"
+msgstr "Минимизировать"
+
+#: main.py:82
+msgid "Zoom"
+msgstr "Увеличить"
+
+#: main.py:85
+msgid "Help"
+msgstr "Помощь"
+
+#: main.py:86
+msgid "About {productName}"
+msgstr "О {productName}"
+
+#: main.py:87
+msgid "About Qt"
+msgstr "О Qt"
+
+#: main.py:90
+msgid "Setting-up splitter..."
+msgstr "Настройка сплиттера..."
+
+#: main.py:99
+msgid "Ln <b>1</b>, Col <b>1</b>"
+msgstr "Строка <b>1</ b>, стобец <b>1</ b>"
+
+#: main.py:111
+msgid "All set!"
+msgstr "Все готово!"
+
+#: main.py:137
+msgid "Version: {version}"
+msgstr "Версия: {version}"
+

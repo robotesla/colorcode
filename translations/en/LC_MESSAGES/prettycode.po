@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: prettycode\n"
+"Language: en\n"
+
+#: main.py:18
+msgid "Ln {line}, Col {column}"
+msgstr "Ln {line}, Col {column}"
+
+#: main.py:21
+msgid "Setting-up completer..."
+msgstr "Setting-up completer..."
+
+#: main.py:30
+msgid "Setting-up toolbar..."
+msgstr "Setting-up toolbar..."
+
+#: main.py:36
+msgid "Build and Run"
+msgstr "Build and Run"
+
+#: main.py:37
+msgid "Build in package"
+msgstr "Build in package"
+
+#: main.py:38
+msgid "Project Settings"
+msgstr "Project Settings"
+
+#: main.py:39
+msgid "Open Project"
+msgstr "Open Project"
+
+#: main.py:40
+msgid "Save Project"
+msgstr "Save Project"
+
+#: main.py:43
+msgid "Setting-up buttom panel..."
+msgstr "Setting-up buttom panel..."
+
+#: main.py:51
+msgid "Setting-up menubar..."
+msgstr "Setting-up menubar..."
+
+#: main.py:56
+msgid "File"
+msgstr "File"
+
+#: main.py:57
+msgid "Preferences"
+msgstr "Preferences"
+
+#: main.py:59
+msgid "Edit"
+msgstr "Edit"
+
+#: main.py:60
+msgid "Undo"
+msgstr "Undo"
+
+#: main.py:61
+msgid "Redo"
+msgstr "Redo"
+
+#: main.py:63
+msgid "Cut"
+msgstr "Cut"
+
+#: main.py:64
+msgid "Copy"
+msgstr "Copy"
+
+#: main.py:65
+msgid "Paste"
+msgstr "Paste"
+
+#: main.py:67
+msgid "Selection"
+msgstr "Selection"
+
+#: main.py:68
+msgid "Select All"
+msgstr "Select All"
+
+#: main.py:70
+msgid "Format"
+msgstr "Format"
+
+#: main.py:71
+msgid "Font"
+msgstr "Font"
+
+#: main.py:72
+msgid "Zoom In"
+msgstr "Zoom In"
+
+#: main.py:73
+msgid "Zoom Out"
+msgstr "Zoom Out"
+
+#: main.py:75
+msgid "View"
+msgstr "View"
+
+#: main.py:76
+msgid "Toggle Toolbar"
+msgstr "Toggle Toolbar"
+
+#: main.py:77
+msgid "Toggle Buttom Panel"
+msgstr "Toggle Buttom Panel"
+
+#: main.py:78
+msgid "Toggle Statusbar"
+msgstr "Toggle Statusbar"
+
+#: main.py:80
+msgid "Window"
+msgstr "Window"
+
+#: main.py:81
+msgid "Minimize"
+msgstr "Minimize"
+
+#: main.py:82
+msgid "Zoom"
+msgstr "Zoom"
+
+#: main.py:85
+msgid "Help"
+msgstr "Help"
+
+#: main.py:86
+msgid "About {productName}"
+msgstr "About {productName}"
+
+#: main.py:87
+msgid "About Qt"
+msgstr "About Qt"
+
+#: main.py:90
+msgid "Setting-up splitter..."
+msgstr "Setting-up splitter..."
+
+#: main.py:99
+msgid "Ln <b>1</b>, Col <b>1</b>"
+msgstr "Ln <b>1</b>, Col <b>1</b>"
+
+#: main.py:111
+msgid "All set!"
+msgstr "All set!"
+
+#: main.py:137
+msgid "Version: {version}"
+msgstr "Version: {version}"
+
