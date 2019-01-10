@@ -147,10 +147,6 @@ msgstr "О Qt"
 msgid "Setting-up splitter..."
 msgstr "Настройка сплиттера..."
 
-#: main.py:99
-msgid "Ln <b>1</b>, Col <b>1</b>"
-msgstr "Строка <b>1</ b>, стобец <b>1</ b>"
-
 #: main.py:111
 msgid "All set!"
 msgstr "Все готово!"

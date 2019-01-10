@@ -94,7 +94,7 @@ class MainWindow(QMainWindow):
 
     def setupStatusbar(self):
         self.statusBar().setStyleSheet('color: white; spacing: 15px; background: #A700C5; border-radius: 0px;')
-        self.lineStatusLabel = QLabel(_('Ln <b>1</b>, Col <b>1</b>'))
+        self.lineStatusLabel = QLabel(_('Ln {line}, Col {column}').format(column='<b>1</b>', line='<b>1</b>'))
         self.statusBar().addPermanentWidget(self.lineStatusLabel)
 
     def setupUI(self):
