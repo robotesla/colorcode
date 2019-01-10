@@ -2,9 +2,10 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from resources import __resourcesDirectory__
 from widgets.codeedit import QCodeEdit
 from windows.settings import PreferencesWindow
-from resources import __resourcesDirectory__
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -123,8 +124,8 @@ if __name__ == '__main__':
     from qtmodern.styles import dark
     dark(app)
     
-    from translations import returnLanguage
-    _ = returnLanguage('en')
+    from translations import returnLanguage, language
+    _ = returnLanguage(language)
 
     splashPicture = QPixmap(__resourcesDirectory__ + 'splash.png')
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
@@ -151,4 +152,3 @@ if __name__ == '__main__':
     window.show()
     splashScreen.finish(window)
     app.exec_()
-    
