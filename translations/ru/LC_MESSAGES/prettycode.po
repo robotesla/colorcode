@@ -117,7 +117,7 @@ msgstr "Вкл/Выкл нижнюю панель"
 
 #: main.py:78
 msgid "Toggle Statusbar"
-msgstr "Переключить статусбар"
+msgstr "Вкл/Выкл статусбар"
 
 #: main.py:80
 msgid "Window"
