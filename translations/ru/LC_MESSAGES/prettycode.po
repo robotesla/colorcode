@@ -61,11 +61,11 @@ msgstr "Правка"
 
 #: main.py:60
 msgid "Undo"
-msgstr "Undo"
+msgstr "Отменить"
 
 #: main.py:61
 msgid "Redo"
-msgstr "Redo"
+msgstr "Вернуть"
 
 #: main.py:63
 msgid "Cut"
@@ -105,7 +105,7 @@ msgstr "Уменьшить"
 
 #: main.py:75
 msgid "View"
-msgstr "Посмотреть"
+msgstr "Вид"
 
 #: main.py:76
 msgid "Toggle Toolbar"
