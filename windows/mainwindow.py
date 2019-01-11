@@ -85,7 +85,7 @@ class MainWindow(QMainWindow):
         
 
         helpMenu = self.menuBar().addMenu(_('Help'))
-        helpMenu.addAction(_('About {productName}').format(productName=QCoreApplication.applicationName()), lambda: QMessageBox.about(self, _('About {productName}').format(productName=QCoreApplication.applicationName()), 'Pretty development IDE.\nVersion: {productVersion}'.format(QCoreApplication.applicationVersion())))
+        helpMenu.addAction(_('About {productName}').format(productName=QCoreApplication.applicationName()), lambda: QMessageBox.about(self, _('About {productName}').format(productName=QCoreApplication.applicationName()), 'Pretty development IDE.\nVersion: {productVersion}'.format(productVersion=QCoreApplication.applicationVersion())))
         helpMenu.addAction(_('About Qt'), lambda: QMessageBox.aboutQt(self, _('About Qt')))
 
     def setupSplitter(self):
