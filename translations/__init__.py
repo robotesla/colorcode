@@ -12,6 +12,7 @@ languages = []
 for language in listdir(path):
     if language.startswith('__'): continue
     languages.append(language)
+
 language = QSettings().value('interface/language', 'en')
 
 def returnLanguage(language):
