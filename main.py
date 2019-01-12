@@ -3,8 +3,6 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from windows.mainwindow import MainWindow
 
-from resources import __resourcesDirectory__
-
 if __name__ == '__main__':
     QCoreApplication.setApplicationName('Prettycode')
     QCoreApplication.setOrganizationDomain('ketsu8')
@@ -21,6 +19,7 @@ if __name__ == '__main__':
     from translations import returnLanguage, language
     _ = returnLanguage(language)
 
+    from resources import __resourcesDirectory__
     splashPicture = QPixmap(__resourcesDirectory__ + 'splash.png')
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
     splashScreen.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)

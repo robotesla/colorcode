@@ -1,157 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-12 02:51+0300\n"
+"PO-Revision-Date: 2019-01-12 02:58+0300\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: prettycode\n"
-"Language: en\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2\n"
 
-#: main.py:18
+#: windows/mainwindow.py:20 windows/mainwindow.py:101
+#, python-brace-format
 msgid "Ln {line}, Col {column}"
-msgstr "Ln {line}, Col {column}"
+msgstr ""
 
-#: main.py:21
+#: windows/mainwindow.py:23
 msgid "Setting-up completer..."
-msgstr "Setting-up completer..."
+msgstr ""
 
-#: main.py:30
+#: windows/mainwindow.py:32
 msgid "Setting-up toolbar..."
-msgstr "Setting-up toolbar..."
+msgstr ""
 
-#: main.py:36
+#: windows/mainwindow.py:38
 msgid "Build and Run"
-msgstr "Build and Run"
+msgstr ""
 
-#: main.py:37
+#: windows/mainwindow.py:39
 msgid "Build in package"
-msgstr "Build in package"
+msgstr ""
 
-#: main.py:38
+#: windows/mainwindow.py:40
 msgid "Project Settings"
-msgstr "Project Settings"
+msgstr ""
 
-#: main.py:39
+#: windows/mainwindow.py:41
 msgid "Open Project"
-msgstr "Open Project"
+msgstr ""
 
-#: main.py:40
+#: windows/mainwindow.py:42
 msgid "Save Project"
-msgstr "Save Project"
+msgstr ""
 
-#: main.py:43
+#: windows/mainwindow.py:45
 msgid "Setting-up buttom panel..."
-msgstr "Setting-up buttom panel..."
+msgstr ""
 
-#: main.py:51
+#: windows/mainwindow.py:53
 msgid "Setting-up menubar..."
-msgstr "Setting-up menubar..."
+msgstr ""
 
-#: main.py:56
+#: windows/mainwindow.py:58
 msgid "File"
-msgstr "File"
+msgstr ""
 
-#: main.py:57
+#: windows/mainwindow.py:59 windows/settings.py:93
 msgid "Preferences"
-msgstr "Preferences"
+msgstr ""
 
-#: main.py:59
+#: windows/mainwindow.py:61
 msgid "Edit"
-msgstr "Edit"
+msgstr ""
 
-#: main.py:60
+#: windows/mainwindow.py:62
 msgid "Undo"
-msgstr "Undo"
+msgstr ""
 
-#: main.py:61
+#: windows/mainwindow.py:63
 msgid "Redo"
-msgstr "Redo"
+msgstr ""
 
-#: main.py:63
+#: windows/mainwindow.py:65
 msgid "Cut"
-msgstr "Cut"
+msgstr ""
 
-#: main.py:64
+#: windows/mainwindow.py:66
 msgid "Copy"
-msgstr "Copy"
+msgstr ""
 
-#: main.py:65
+#: windows/mainwindow.py:67
 msgid "Paste"
-msgstr "Paste"
+msgstr ""
 
-#: main.py:67
+#: windows/mainwindow.py:69
 msgid "Selection"
-msgstr "Selection"
+msgstr ""
 
-#: main.py:68
+#: windows/mainwindow.py:70
 msgid "Select All"
-msgstr "Select All"
+msgstr ""
 
-#: main.py:70
+#: windows/mainwindow.py:72
 msgid "Format"
-msgstr "Format"
+msgstr ""
 
-#: main.py:71
+#: windows/mainwindow.py:73
 msgid "Font"
-msgstr "Font"
+msgstr ""
 
-#: main.py:72
+#: windows/mainwindow.py:74
 msgid "Zoom In"
-msgstr "Zoom In"
+msgstr ""
 
-#: main.py:73
+#: windows/mainwindow.py:75
 msgid "Zoom Out"
-msgstr "Zoom Out"
+msgstr ""
 
-#: main.py:75
+#: windows/mainwindow.py:77
 msgid "View"
-msgstr "View"
+msgstr ""
 
-#: main.py:76
+#: windows/mainwindow.py:78
 msgid "Toggle Toolbar"
-msgstr "Toggle Toolbar"
+msgstr ""
 
-#: main.py:77
+#: windows/mainwindow.py:79
 msgid "Toggle Buttom Panel"
-msgstr "Toggle Buttom Panel"
+msgstr ""
 
-#: main.py:78
+#: windows/mainwindow.py:80
 msgid "Toggle Statusbar"
-msgstr "Toggle Statusbar"
+msgstr ""
 
-#: main.py:80
+#: windows/mainwindow.py:82
 msgid "Window"
-msgstr "Window"
+msgstr ""
 
-#: main.py:81
+#: windows/mainwindow.py:83
 msgid "Minimize"
-msgstr "Minimize"
+msgstr ""
 
-#: main.py:82
+#: windows/mainwindow.py:84
 msgid "Zoom"
-msgstr "Zoom"
+msgstr ""
 
-#: main.py:85
+#: windows/mainwindow.py:87
 msgid "Help"
-msgstr "Help"
+msgstr ""
 
-#: main.py:86
+#: windows/mainwindow.py:88
+#, python-brace-format
 msgid "About {productName}"
-msgstr "About {productName}"
+msgstr ""
 
-#: main.py:87
+#: windows/mainwindow.py:89
 msgid "About Qt"
-msgstr "About Qt"
+msgstr ""
 
-#: main.py:90
+#: windows/mainwindow.py:92
 msgid "Setting-up splitter..."
-msgstr "Setting-up splitter..."
+msgstr ""
 
-#: main.py:111
+#: windows/mainwindow.py:113
 msgid "All set!"
-msgstr "All set!"
+msgstr ""
 
-#: main.py:137
-msgid "Version: {version}"
-msgstr "Version: {version}"
+#: windows/settings.py:22
+msgid "Visible Toolbar"
+msgstr ""
 
+#: windows/settings.py:25
+msgid "Visible Buttom Panel"
+msgstr ""
+
+#: windows/settings.py:28
+msgid "Visible Status Bar"
+msgstr ""
+
+#: windows/settings.py:31
+msgid "Enable Auto Complete (Beta)"
+msgstr ""
+
+#: windows/settings.py:41
+msgid "Language:"
+msgstr ""
+
+#: windows/settings.py:44
+msgid "Interface"
+msgstr ""
+
+#: windows/settings.py:51
+msgid "John"
+msgstr ""
+
+#: windows/settings.py:52
+msgid "Name:"
+msgstr ""
+
+#: windows/settings.py:57
+msgid "E-mail:"
+msgstr ""
+
+#: windows/settings.py:63
+msgid "Country:"
+msgstr ""
+
+#: windows/settings.py:66
+msgid "Personal"
+msgstr ""

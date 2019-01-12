@@ -19,16 +19,16 @@ class PreferencesWindow(QDialog):
         interfaceWidget.setLayout(QVBoxLayout())
         interfaceWidget.layout().addStretch(1)
 
-        self.toolbarCheck = QCheckBox('Visible Toolbar')
+        self.toolbarCheck = QCheckBox(_('Visible Toolbar'))
         interfaceWidget.layout().addWidget(self.toolbarCheck)
 
-        self.buttomPanelCheck = QCheckBox('Visible Buttom Panel')
+        self.buttomPanelCheck = QCheckBox(_('Visible Buttom Panel'))
         interfaceWidget.layout().addWidget(self.buttomPanelCheck)
 
-        self.statusBarCheck = QCheckBox('Visible Status Bar')
+        self.statusBarCheck = QCheckBox(_('Visible Status Bar'))
         interfaceWidget.layout().addWidget(self.statusBarCheck)
 
-        self.autoCompleteCheck = QCheckBox('Enable Auto Complete (Beta)')
+        self.autoCompleteCheck = QCheckBox(_('Enable Auto Complete (Beta)'))
         interfaceWidget.layout().addWidget(self.autoCompleteCheck)
 
         self.languageBox = QComboBox()
@@ -38,32 +38,32 @@ class PreferencesWindow(QDialog):
         self.languageBox.setCurrentIndex(self.languageBox.findText(language))
         
 
-        interfaceWidget.layout().addWidget(QLabel('Language:'))
+        interfaceWidget.layout().addWidget(QLabel(_('Language:')))
         interfaceWidget.layout().addWidget(self.languageBox)
 
-        self.tabWidget.addTab(interfaceWidget, 'Interface')
+        self.tabWidget.addTab(interfaceWidget, _('Interface'))
 
         personalWidget = QWidget()
         personalWidget.setLayout(QVBoxLayout())
         personalWidget.layout().addStretch(1)
 
         self.authorNameEdit = QLineEdit()
-        self.authorNameEdit.setPlaceholderText('John')
-        personalWidget.layout().addWidget(QLabel('Name:'))
+        self.authorNameEdit.setPlaceholderText(_('John'))
+        personalWidget.layout().addWidget(QLabel(_('Name:')))
         personalWidget.layout().addWidget(self.authorNameEdit)
 
         self.authorEmailEdit = QLineEdit()
         self.authorEmailEdit.setPlaceholderText('johnsmith@mail.com')
-        personalWidget.layout().addWidget(QLabel('E-mail:'))
+        personalWidget.layout().addWidget(QLabel(_('E-mail:')))
         personalWidget.layout().addWidget(self.authorEmailEdit)
 
         self.countryBox = QComboBox()
         self.countryBox.addItem('Russia')
         self.countryBox.addItem('USA')
-        personalWidget.layout().addWidget(QLabel('Country:'))
+        personalWidget.layout().addWidget(QLabel(_('Country:')))
         personalWidget.layout().addWidget(self.countryBox)
 
-        self.tabWidget.addTab(personalWidget, 'Personal')
+        self.tabWidget.addTab(personalWidget, _('Personal'))
 
     def setupDialogButtonBox(self):
         self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
@@ -90,6 +90,6 @@ class PreferencesWindow(QDialog):
         self.setupLayout()
 
         self.setFixedSize(400, 400)
-        self.setWindowTitle('Preferences')
+        self.setWindowTitle(_('Preferences'))
 
         self.currentLanguage = self.languageBox.currentIndex()

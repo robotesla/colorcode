@@ -1,160 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-12 02:51+0300\n"
+"PO-Revision-Date: 2019-01-12 02:55+0300\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
-"Project-Id-Version: prettycode\n"
-"Language: ru\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"X-Generator: Poedit 2.2\n"
 
-#: main.py:18
+#: windows/mainwindow.py:20 windows/mainwindow.py:101
+#, python-brace-format
 msgid "Ln {line}, Col {column}"
 msgstr "Строка {line}, Столбец {column}"
 
-#: main.py:21
+#: windows/mainwindow.py:23
 msgid "Setting-up completer..."
 msgstr "Настройка авто-подсказок..."
 
-#: main.py:30
+#: windows/mainwindow.py:32
 msgid "Setting-up toolbar..."
 msgstr "Настройка панели инструментов..."
 
-#: main.py:36
+#: windows/mainwindow.py:38
 msgid "Build and Run"
 msgstr "Собрать и запустить"
 
-#: main.py:37
+#: windows/mainwindow.py:39
 msgid "Build in package"
 msgstr "Собрать пакет"
 
-#: main.py:38
+#: windows/mainwindow.py:40
 msgid "Project Settings"
 msgstr "Настройки проекта"
 
-#: main.py:39
+#: windows/mainwindow.py:41
 msgid "Open Project"
 msgstr "Открыть проект"
 
-#: main.py:40
+#: windows/mainwindow.py:42
 msgid "Save Project"
 msgstr "Сохранить проект"
 
-#: main.py:43
+#: windows/mainwindow.py:45
 msgid "Setting-up buttom panel..."
 msgstr "Настройка нижней панели..."
 
-#: main.py:51
+#: windows/mainwindow.py:53
 msgid "Setting-up menubar..."
 msgstr "Настройка меню..."
 
-#: main.py:56
+#: windows/mainwindow.py:58
 msgid "File"
 msgstr "Файл"
 
-#: main.py:57
+#: windows/mainwindow.py:59 windows/settings.py:93
 msgid "Preferences"
 msgstr "Параметры"
 
-#: main.py:59
+#: windows/mainwindow.py:61
 msgid "Edit"
 msgstr "Правка"
 
-#: main.py:60
+#: windows/mainwindow.py:62
 msgid "Undo"
 msgstr "Отменить"
 
-#: main.py:61
+#: windows/mainwindow.py:63
 msgid "Redo"
 msgstr "Вернуть"
 
-#: main.py:63
+#: windows/mainwindow.py:65
 msgid "Cut"
 msgstr "Вырезать"
 
-#: main.py:64
+#: windows/mainwindow.py:66
 msgid "Copy"
 msgstr "Копировать"
 
-#: main.py:65
+#: windows/mainwindow.py:67
 msgid "Paste"
 msgstr "Вставить"
 
-#: main.py:67
+#: windows/mainwindow.py:69
 msgid "Selection"
 msgstr "Выделение"
 
-#: main.py:68
+#: windows/mainwindow.py:70
 msgid "Select All"
 msgstr "Выделить все"
 
-#: main.py:70
+#: windows/mainwindow.py:72
 msgid "Format"
 msgstr "Формат"
 
-#: main.py:71
+#: windows/mainwindow.py:73
 msgid "Font"
 msgstr "Шрифт"
 
-#: main.py:72
+#: windows/mainwindow.py:74
 msgid "Zoom In"
 msgstr "Приблизить"
 
-#: main.py:73
+#: windows/mainwindow.py:75
 msgid "Zoom Out"
 msgstr "Уменьшить"
 
-#: main.py:75
+#: windows/mainwindow.py:77
 msgid "View"
 msgstr "Вид"
 
-#: main.py:76
+#: windows/mainwindow.py:78
 msgid "Toggle Toolbar"
 msgstr "Показать/Скрыть панель инструментов"
 
-#: main.py:77
+#: windows/mainwindow.py:79
 msgid "Toggle Buttom Panel"
 msgstr "Показать/Скрыть нижнюю панель"
 
-#: main.py:78
+#: windows/mainwindow.py:80
 msgid "Toggle Statusbar"
 msgstr "Показать/Скрыть статусбар"
 
-#: main.py:80
+#: windows/mainwindow.py:82
 msgid "Window"
 msgstr "Окно"
 
-#: main.py:81
+#: windows/mainwindow.py:83
 msgid "Minimize"
 msgstr "Минимизировать"
 
-#: main.py:82
+#: windows/mainwindow.py:84
 msgid "Zoom"
 msgstr "Увеличить"
 
-#: main.py:85
+#: windows/mainwindow.py:87
 msgid "Help"
 msgstr "Помощь"
 
-#: main.py:86
+#: windows/mainwindow.py:88
+#, python-brace-format
 msgid "About {productName}"
 msgstr "О {productName}"
 
-#: main.py:87
+#: windows/mainwindow.py:89
 msgid "About Qt"
 msgstr "О Qt"
 
-#: main.py:90
+#: windows/mainwindow.py:92
 msgid "Setting-up splitter..."
 msgstr "Настройка сплиттера..."
 
-#: main.py:111
+#: windows/mainwindow.py:113
 msgid "All set!"
 msgstr "Все готово!"
 
-#: main.py:137
-msgid "Version: {version}"
-msgstr "Версия: {version}"
+#: windows/settings.py:22
+msgid "Visible Toolbar"
+msgstr "Отображение панель инструментов"
+
+#: windows/settings.py:25
+msgid "Visible Buttom Panel"
+msgstr "Отображение нижнюю панель"
+
+#: windows/settings.py:28
+msgid "Visible Status Bar"
+msgstr "Отображение статусбара"
+
+#: windows/settings.py:31
+msgid "Enable Auto Complete (Beta)"
+msgstr "Использовать автоподсказки (Бета)"
+
+#: windows/settings.py:41
+msgid "Language:"
+msgstr "Язык:"
+
+#: windows/settings.py:44
+msgid "Interface"
+msgstr "Интерфейс"
+
+#: windows/settings.py:51
+msgid "John"
+msgstr "Никита"
+
+#: windows/settings.py:52
+msgid "Name:"
+msgstr "Имя:"
+
+#: windows/settings.py:57
+msgid "E-mail:"
+msgstr "Эл. почта:"
+
+#: windows/settings.py:63
+msgid "Country:"
+msgstr "Страна:"
+
+#: windows/settings.py:66
+msgid "Personal"
+msgstr "Пользовательские данные"
