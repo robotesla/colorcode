@@ -23,3 +23,10 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
+
+## Multilanguage
+
+Supported languages:
+
+- Russian
+- English
