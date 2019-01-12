@@ -31,6 +31,11 @@ class PreferencesWindow(QDialog):
         self.autoCompleteCheck = QCheckBox(_('Enable Auto Complete (Beta)'))
         interfaceWidget.layout().addWidget(self.autoCompleteCheck)
 
+        self.darkThemeCheck = QCheckBox(_('Use Dark Theme'))
+        self.darkThemeCheck.setEnabled(False)
+        self.darkThemeCheck.setChecked(True)
+        interfaceWidget.layout().addWidget(self.darkThemeCheck)
+
         self.languageBox = QComboBox()
         
         from translations import languages, language
