@@ -6,6 +6,7 @@ from sys import argv
 from PySide2.QtCore import QSettings
 from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox
 
+
 path = join(dirname(argv[0]), 'translations')
 settings = QSettings()
 
@@ -14,7 +15,7 @@ for language in listdir(path):
     if language.startswith('__'): continue
     languages.append(language)
 
-language = settings.value('interface/language', 'en')
+language = settings.value('interface/language', 'en_EN')
 
 def returnLanguage(language):
     return translation('prettycode', path, [language]).gettext
