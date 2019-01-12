@@ -3,7 +3,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from resources import __resourcesDirectory__
-from translations import language, returnLanguage
+from settings import language, returnLanguage
 
 _ = returnLanguage(language)
 
@@ -38,7 +38,7 @@ class PreferencesWindow(QDialog):
 
         self.languageBox = QComboBox()
         
-        from translations import languages, language
+        from settings import languages
         self.languageBox.addItems(languages)
         self.languageBox.setCurrentIndex(self.languageBox.findText(language))
         
@@ -83,7 +83,7 @@ class PreferencesWindow(QDialog):
 
     def saveSettings(self):
         if not self.languageBox.currentIndex() == self.currentLanguage:
-            from translations import setLanguage
+            from settings import setLanguage
             setLanguage(self.languageBox.currentText())
             QApplication.quit()
         QMessageBox.critical(self, 'Saving', 'Preferences saving in development. You only can change language.')

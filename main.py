@@ -16,7 +16,7 @@ if __name__ == '__main__':
     from qtmodern.styles import dark
     dark(app)
     
-    from translations import returnLanguage, language
+    from settings import returnLanguage, language
     _ = returnLanguage(language)
 
     from resources import __resourcesDirectory__

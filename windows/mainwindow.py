@@ -6,7 +6,7 @@ from widgets.codeedit import QCodeEdit
 from windows.settings import PreferencesWindow
 
 from resources import __resourcesDirectory__
-from translations import language, returnLanguage
+from settings import language, returnLanguage
 
 _ = returnLanguage(language)
 
