@@ -77,7 +77,7 @@ class PreferencesWindow(QDialog):
         self.tabWidget.addTab(personalWidget, _('Personal'))
 
     def setupDialogButtonBox(self):
-        self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
+        self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Apply)
         self.buttonBox.accepted.connect(self.saveSettings)
         self.buttonBox.rejected.connect(self.reject)
 
