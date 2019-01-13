@@ -13,17 +13,12 @@ for language in listdir(path):
     if language.startswith('__'): continue
     languages.append(language)
 
-# interface
-
 language = settings.value('interface/language', 'en_EN')
 darkThemeEnable = True if settings.value('interface/darkThemeEnable', 'true') == 'true' else False
 toolBarEnable = True if settings.value('interface/toolBarEnable', 'true') == 'true' else False
 buttomPanelEnable = True if settings.value('interface/buttomPanelEnable', 'false') == 'true' else False
 statusBarEnable = True if settings.value('interface/statusBarEnable', 'true') == 'true' else False
 autoCompleteEnable = True if settings.value('interface/autoCompleteEnable', 'false') == 'true' else False
-
-# personal
-
 name = settings.value('personal/name', '')
 email = settings.value('personal/email', '')
 country = settings.value('personal/country', 'Russia')

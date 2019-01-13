@@ -77,7 +77,7 @@ class PreferencesWindow(QDialog):
         self.tabWidget.addTab(personalWidget, _('Personal'))
 
     def setupDialogButtonBox(self):
-        self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Apply)
+        self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
         self.buttonBox.accepted.connect(self.saveSettings)
         self.buttonBox.rejected.connect(self.reject)
 
@@ -100,7 +100,7 @@ class PreferencesWindow(QDialog):
         settings.setValue('personal/country', self.countryBox.currentText())
         settings.sync()
         
-        QMessageBox.information(self, 'Saving', 'Preferences successfuly saved.')
+        QMessageBox.information(self, _('Saving Settings'), _('Preferences successfuly saved. Application needs reload.'))
         QApplication.quit()
 
     def setupUI(self):

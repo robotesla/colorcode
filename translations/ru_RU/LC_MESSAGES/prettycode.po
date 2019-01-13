@@ -7,17 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-12 03:17+0300\n"
-"PO-Revision-Date: 2019-01-12 03:18+0300\n"
-"Language: ru\n"
+"POT-Creation-Date: 2019-01-13 03:50+0300\n"
+"PO-Revision-Date: 2019-01-13 03:52+0300\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.2\n"
 
-#: windows/mainwindow.py:20 windows/mainwindow.py:101
+#: windows/mainwindow.py:20 windows/mainwindow.py:97
 #, python-brace-format
 msgid "Ln {line}, Col {column}"
 msgstr "Строка {line}, Столбец {column}"
@@ -30,136 +31,120 @@ msgstr "Настройка авто-подсказок..."
 msgid "Setting-up toolbar..."
 msgstr "Настройка панели инструментов..."
 
-#: windows/mainwindow.py:38
+#: windows/mainwindow.py:39
 msgid "Build and Run"
 msgstr "Собрать и запустить"
 
-#: windows/mainwindow.py:39
+#: windows/mainwindow.py:40
 msgid "Build in package"
 msgstr "Собрать пакет"
 
-#: windows/mainwindow.py:40
+#: windows/mainwindow.py:41
 msgid "Project Settings"
 msgstr "Настройки проекта"
 
-#: windows/mainwindow.py:41
+#: windows/mainwindow.py:42
 msgid "Open Project"
 msgstr "Открыть проект"
 
-#: windows/mainwindow.py:42
+#: windows/mainwindow.py:43
 msgid "Save Project"
 msgstr "Сохранить проект"
 
-#: windows/mainwindow.py:45
+#: windows/mainwindow.py:46
 msgid "Setting-up buttom panel..."
 msgstr "Настройка нижней панели..."
 
-#: windows/mainwindow.py:53
+#: windows/mainwindow.py:54
 msgid "Setting-up menubar..."
 msgstr "Настройка меню..."
 
-#: windows/mainwindow.py:58
+#: windows/mainwindow.py:59
 msgid "File"
 msgstr "Файл"
 
-#: windows/mainwindow.py:59 windows/settings.py:98
+#: windows/mainwindow.py:60 windows/settings.py:112
 msgid "Preferences"
 msgstr "Параметры"
 
-#: windows/mainwindow.py:61
+#: windows/mainwindow.py:62
 msgid "Edit"
 msgstr "Правка"
 
-#: windows/mainwindow.py:62
+#: windows/mainwindow.py:63
 msgid "Undo"
 msgstr "Отменить"
 
-#: windows/mainwindow.py:63
+#: windows/mainwindow.py:64
 msgid "Redo"
 msgstr "Вернуть"
 
-#: windows/mainwindow.py:65
+#: windows/mainwindow.py:66
 msgid "Cut"
 msgstr "Вырезать"
 
-#: windows/mainwindow.py:66
+#: windows/mainwindow.py:67
 msgid "Copy"
 msgstr "Копировать"
 
-#: windows/mainwindow.py:67
+#: windows/mainwindow.py:68
 msgid "Paste"
 msgstr "Вставить"
 
-#: windows/mainwindow.py:69
+#: windows/mainwindow.py:70
 msgid "Selection"
 msgstr "Выделение"
 
-#: windows/mainwindow.py:70
+#: windows/mainwindow.py:71
 msgid "Select All"
 msgstr "Выделить все"
 
-#: windows/mainwindow.py:72
+#: windows/mainwindow.py:73
 msgid "Format"
 msgstr "Формат"
 
-#: windows/mainwindow.py:73
+#: windows/mainwindow.py:74
 msgid "Font"
 msgstr "Шрифт"
 
-#: windows/mainwindow.py:74
+#: windows/mainwindow.py:75
 msgid "Zoom In"
 msgstr "Приблизить"
 
-#: windows/mainwindow.py:75
+#: windows/mainwindow.py:76
 msgid "Zoom Out"
 msgstr "Уменьшить"
 
-#: windows/mainwindow.py:77
-msgid "View"
-msgstr "Вид"
-
 #: windows/mainwindow.py:78
-msgid "Toggle Toolbar"
-msgstr "Показать/Скрыть панель инструментов"
-
-#: windows/mainwindow.py:79
-msgid "Toggle Buttom Panel"
-msgstr "Показать/Скрыть нижнюю панель"
-
-#: windows/mainwindow.py:80
-msgid "Toggle Statusbar"
-msgstr "Показать/Скрыть статусбар"
-
-#: windows/mainwindow.py:82
 msgid "Window"
 msgstr "Окно"
 
-#: windows/mainwindow.py:83
+#: windows/mainwindow.py:79
 msgid "Minimize"
 msgstr "Минимизировать"
 
-#: windows/mainwindow.py:84
+#: windows/mainwindow.py:80
 msgid "Zoom"
 msgstr "Увеличить"
 
-#: windows/mainwindow.py:87
+#: windows/mainwindow.py:82
 msgid "Help"
 msgstr "Помощь"
 
-#: windows/mainwindow.py:88
+#: windows/mainwindow.py:83
 #, python-brace-format
 msgid "About {productName}"
 msgstr "О {productName}"
 
-#: windows/mainwindow.py:89
+#: windows/mainwindow.py:84
 msgid "About Qt"
 msgstr "О Qt"
 
-#: windows/mainwindow.py:92
+#: windows/mainwindow.py:87
 msgid "Setting-up splitter..."
 msgstr "Настройка сплиттера..."
 
-#: windows/mainwindow.py:113
+#: windows/mainwindow.py:109
 msgid "All set!"
 msgstr "Все готово!"
 
@@ -167,51 +152,59 @@ msgstr "Все готово!"
 msgid "Visible Toolbar"
 msgstr "Отображение панель инструментов"
 
-#: windows/settings.py:25
+#: windows/settings.py:26
 msgid "Visible Buttom Panel"
 msgstr "Отображение нижнюю панель"
 
-#: windows/settings.py:28
+#: windows/settings.py:30
 msgid "Visible Status Bar"
 msgstr "Отображение статусбара"
 
-#: windows/settings.py:31
+#: windows/settings.py:34
 msgid "Enable Auto Complete (Beta)"
 msgstr "Использовать автоподсказки (Бета)"
 
-#: windows/settings.py:34
+#: windows/settings.py:38
 msgid "Use Dark Theme"
 msgstr "Использовать темную тему"
 
-#: windows/settings.py:46
+#: windows/settings.py:49
 msgid "Language:"
 msgstr "Язык:"
 
-#: windows/settings.py:49
+#: windows/settings.py:52
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: windows/settings.py:56
+#: windows/settings.py:59
 msgid "John"
-msgstr "Никита"
+msgstr "Джон"
 
-#: windows/settings.py:57
+#: windows/settings.py:61
 msgid "Name:"
 msgstr "Имя:"
 
-#: windows/settings.py:62
+#: windows/settings.py:67
 msgid "E-mail:"
 msgstr "Эл. почта:"
 
-#: windows/settings.py:68
+#: windows/settings.py:74
 msgid "Country:"
 msgstr "Страна:"
 
-#: windows/settings.py:71
+#: windows/settings.py:77
 msgid "Personal"
 msgstr "Пользовательские данные"
 
-#: main.py:32
+#: windows/settings.py:103
+msgid "Saving Settings"
+msgstr "Настройки проекта"
+
+#: windows/settings.py:103
+msgid "Preferences successfuly saved. Application needs reload."
+msgstr "Настройки успешно сохранены. Приложение нуждается в перезагрузке."
+
+#: main.py:31
 #, python-brace-format
 msgid "Version: {version}"
 msgstr "Версия: {version}"
