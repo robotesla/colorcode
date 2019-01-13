@@ -4,8 +4,6 @@ from os.path import dirname, join
 from sys import argv
 
 from PySide2.QtCore import QSettings
-from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox
-
 
 path = join(dirname(argv[0]), 'translations')
 settings = QSettings()
@@ -15,12 +13,20 @@ for language in listdir(path):
     if language.startswith('__'): continue
     languages.append(language)
 
+# interface
+
 language = settings.value('interface/language', 'en_EN')
+darkThemeEnable = True if settings.value('interface/darkThemeEnable', 'true') == 'true' else False
+toolBarEnable = True if settings.value('interface/toolBarEnable', 'true') == 'true' else False
+buttomPanelEnable = True if settings.value('interface/buttomPanelEnable', 'false') == 'true' else False
+statusBarEnable = True if settings.value('interface/statusBarEnable', 'true') == 'true' else False
+autoCompleteEnable = True if settings.value('interface/autoCompleteEnable', 'false') == 'true' else False
+
+# personal
+
+name = settings.value('personal/name', '')
+email = settings.value('personal/email', '')
+country = settings.value('personal/country', 'Russia')
 
 def returnLanguage(language):
     return translation('prettycode', path, [language]).gettext
-
-def setLanguage(language):
-    settings.setValue('interface/language', language)
-    settings.sync()
-    QMessageBox.information(QMainWindow(), 'Setting Language', 'Language successfuly setted. Application need to reload.')

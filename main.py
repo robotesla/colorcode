@@ -5,18 +5,17 @@ from windows.mainwindow import MainWindow
 
 if __name__ == '__main__':
     QCoreApplication.setApplicationName('Prettycode')
-    QCoreApplication.setOrganizationDomain('ketsu8')
     QCoreApplication.setOrganizationName('Ketsu8')
-    QCoreApplication.setApplicationVersion('0.0.1a')
+    QCoreApplication.setApplicationVersion('0.0.1.0')
     app = QApplication([])
 
     from warnings import filterwarnings
     filterwarnings('ignore')
 
+    from settings import returnLanguage, language, darkThemeEnable
     from qtmodern.styles import dark
-    dark(app)
     
-    from settings import returnLanguage, language
+    if darkThemeEnable == True: dark(app)
     _ = returnLanguage(language)
 
     from resources import __resourcesDirectory__

@@ -3,7 +3,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from resources import __resourcesDirectory__
-from settings import language, returnLanguage
+from settings import *
 
 _ = returnLanguage(language)
 
@@ -20,20 +20,24 @@ class PreferencesWindow(QDialog):
         interfaceWidget.layout().addStretch(1)
 
         self.toolbarCheck = QCheckBox(_('Visible Toolbar'))
+        self.toolbarCheck.setChecked(toolBarEnable)
         interfaceWidget.layout().addWidget(self.toolbarCheck)
 
         self.buttomPanelCheck = QCheckBox(_('Visible Buttom Panel'))
+        self.buttomPanelCheck.setChecked(buttomPanelEnable)
         interfaceWidget.layout().addWidget(self.buttomPanelCheck)
 
         self.statusBarCheck = QCheckBox(_('Visible Status Bar'))
+        self.statusBarCheck.setChecked(statusBarEnable)
         interfaceWidget.layout().addWidget(self.statusBarCheck)
 
         self.autoCompleteCheck = QCheckBox(_('Enable Auto Complete (Beta)'))
+        self.autoCompleteCheck.setChecked(autoCompleteEnable)
         interfaceWidget.layout().addWidget(self.autoCompleteCheck)
 
         self.darkThemeCheck = QCheckBox(_('Use Dark Theme'))
         self.darkThemeCheck.setEnabled(False)
-        self.darkThemeCheck.setChecked(True)
+        self.darkThemeCheck.setChecked(darkThemeEnable)
         interfaceWidget.layout().addWidget(self.darkThemeCheck)
 
         self.languageBox = QComboBox()
@@ -42,7 +46,6 @@ class PreferencesWindow(QDialog):
         self.languageBox.addItems(languages)
         self.languageBox.setCurrentIndex(self.languageBox.findText(language))
         
-
         interfaceWidget.layout().addWidget(QLabel(_('Language:')))
         interfaceWidget.layout().addWidget(self.languageBox)
 
@@ -54,15 +57,18 @@ class PreferencesWindow(QDialog):
 
         self.authorNameEdit = QLineEdit()
         self.authorNameEdit.setPlaceholderText(_('John'))
+        self.authorNameEdit.setText(name)
         personalWidget.layout().addWidget(QLabel(_('Name:')))
         personalWidget.layout().addWidget(self.authorNameEdit)
 
         self.authorEmailEdit = QLineEdit()
+        self.authorEmailEdit.setText(email)
         self.authorEmailEdit.setPlaceholderText('johnsmith@mail.com')
         personalWidget.layout().addWidget(QLabel(_('E-mail:')))
         personalWidget.layout().addWidget(self.authorEmailEdit)
 
         self.countryBox = QComboBox()
+        self.countryBox.setCurrentText(country)
         self.countryBox.addItem('Russia')
         self.countryBox.addItem('USA')
         personalWidget.layout().addWidget(QLabel(_('Country:')))
@@ -82,12 +88,20 @@ class PreferencesWindow(QDialog):
         self.setLayout(self.mainLayout)
 
     def saveSettings(self):
-        if not self.languageBox.currentIndex() == self.currentLanguage:
-            from settings import setLanguage
-            setLanguage(self.languageBox.currentText())
-            QApplication.quit()
-        QMessageBox.critical(self, 'Saving', 'Preferences saving in development. You only can change language.')
-        self.close()
+        settings.setValue('interface/language', self.languageBox.currentText())
+        settings.setValue('interface/darkThemeEnable', self.darkThemeCheck.isChecked())
+        settings.setValue('interface/toolBarEnable', self.toolbarCheck.isChecked())
+        settings.setValue('interface/buttomPanelEnable', self.buttomPanelCheck.isChecked())
+        settings.setValue('interface/statusBarEnable', self.statusBarCheck.isChecked())
+        settings.setValue('interface/autoCompleteEnable', self.autoCompleteCheck.isChecked())
+
+        settings.setValue('personal/name', self.authorNameEdit.text())
+        settings.setValue('personal/email', self.authorEmailEdit.text())
+        settings.setValue('personal/country', self.countryBox.currentText())
+        settings.sync()
+        
+        QMessageBox.information(self, 'Saving', 'Preferences successfuly saved.')
+        QApplication.quit()
 
     def setupUI(self):
         self.setupTabWidget()
@@ -96,5 +110,3 @@ class PreferencesWindow(QDialog):
 
         self.setFixedSize(400, 400)
         self.setWindowTitle(_('Preferences'))
-
-        self.currentLanguage = self.languageBox.currentIndex()

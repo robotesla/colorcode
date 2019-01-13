@@ -6,7 +6,7 @@ from widgets.codeedit import QCodeEdit
 from windows.settings import PreferencesWindow
 
 from resources import __resourcesDirectory__
-from settings import language, returnLanguage
+from settings import *
 
 _ = returnLanguage(language)
 
@@ -31,6 +31,7 @@ class MainWindow(QMainWindow):
     def setupToolbar(self):
         self.statusBar().showMessage(_('Setting-up toolbar...'))
         self.toolbar = QToolBar('Toolbar')
+        self.toolbar.setVisible(toolBarEnable)
         self.toolbar.setStyleSheet('padding: 8px; background: #333333; border-radius: 0px; spacing: 15px;')
         self.addToolBar(Qt.LeftToolBarArea, self.toolbar)
         self.toolbar.setMovable(False)
@@ -44,10 +45,10 @@ class MainWindow(QMainWindow):
     def setupButtomPanel(self):
         self.statusBar().showMessage(_('Setting-up buttom panel...'))
         self.buttomPanel = QListView()
+        self.buttomPanel.setVisible(buttomPanelEnable)
         self.buttomPanel.setStyleSheet('color: white; padding: 10px; selection-background-color: #37373D; background: #252526; border-radius: 0px;')
         model = QStandardItemModel()
         self.buttomPanel.setModel(model)
-        self.buttomPanel.setVisible(False)
 
     def setupMenubar(self):
         self.statusBar().showMessage(_('Setting-up menubar...'))
@@ -74,15 +75,9 @@ class MainWindow(QMainWindow):
         fontFormatMenu.addAction(_('Zoom In'), lambda: self.editor.zoomIn(), 'Ctrl++')
         fontFormatMenu.addAction(_('Zoom Out'), lambda: self.editor.zoomOut(), 'Ctrl+-')
 
-        viewMenu = self.menuBar().addMenu(_('View'))
-        viewMenu.addAction(_('Toggle Toolbar'), lambda: self.toolbar.setVisible(not self.toolbar.isVisible()), 'Ctrl+B')
-        viewMenu.addAction(_('Toggle Buttom Panel'), lambda: self.buttomPanel.setVisible(not self.buttomPanel.isVisible()), 'Ctrl+J')
-        viewMenu.addAction(_('Toggle Statusbar'), lambda: self.statusBar().setVisible(not self.statusBar().isVisible()), 'Ctrl+M')
-
         windowMenu = self.menuBar().addMenu(_('Window'))
         windowMenu.addAction(_('Minimize'), lambda: self.showMinimized(), 'Ctrl+M')
         windowMenu.addAction(_('Zoom'), lambda: self.showMaximized())
-        
 
         helpMenu = self.menuBar().addMenu(_('Help'))
         helpMenu.addAction(_('About {productName}').format(productName=QCoreApplication.applicationName()), lambda: QMessageBox.about(self, _('About {productName}').format(productName=QCoreApplication.applicationName()), 'Pretty development IDE.\nVersion: {productVersion}'.format(productVersion=QCoreApplication.applicationVersion())))
@@ -98,6 +93,7 @@ class MainWindow(QMainWindow):
 
     def setupStatusbar(self):
         self.statusBar().setStyleSheet('color: white; spacing: 15px; background: #A700C5; border-radius: 0px;')
+        self.statusBar().setVisible(statusBarEnable)
         self.lineStatusLabel = QLabel(_('Ln {line}, Col {column}').format(column='<b>1</b>', line='<b>1</b>'))
         self.statusBar().addPermanentWidget(self.lineStatusLabel)
 

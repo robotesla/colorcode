@@ -21,7 +21,10 @@ class QCodeEdit(QTextEdit):
         font.setPointSize(13 if platform() == 'Darwin' else 10)
 
         self.setFont(font)
-        self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
+
+        from settings import autoCompleteEnable, darkThemeEnable
+        self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px' if darkThemeEnable == True else 'color: white; padding: 10px; background: #6E6E6E; border-radius: 0px')
+        
         self.setPlaceholderText('Maybe, you should write a couple of lines of code here...')
         self.setTabStopDistance(35)
         self.setPlainText('from matrix import *\n\ndef setup():\n\tpass\n\ndef frame():\n\tpass\n\ndef on_button(button):\n\tpass')
@@ -33,7 +36,7 @@ class QCodeEdit(QTextEdit):
 
         # uncomment to use autocomplete
         # but, now it's very unstable
-        # self.completionsTimer.start()
+        if autoCompleteEnable == True: self.completionsTimer.start()
 
     def setCompleter(self, c):
         if self._completer is not None:
