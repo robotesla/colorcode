@@ -6,7 +6,7 @@ from sys import argv
 from PySide2.QtCore import QSettings
 
 path = join(dirname(argv[0]), 'translations')
-settings = QSettings()
+settings = QSettings('settings.ini', QSettings.IniFormat)
 
 languages = []
 for language in listdir(path):
