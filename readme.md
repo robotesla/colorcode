@@ -16,7 +16,7 @@ Pretty looking IDE for [Betaboard](https://github.com/betaboard) development and
 
 1. Install requirements
 ```sh
-pip install -r requirements.txt 
+pip install -r requirements.txt
 ```
 
 2. Run it
