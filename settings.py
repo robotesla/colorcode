@@ -22,6 +22,7 @@ autoCompleteEnable = True if settings.value('interface/autoCompleteEnable', 'fal
 name = settings.value('personal/name', '')
 email = settings.value('personal/email', '')
 country = settings.value('personal/country', 'Russia')
+preReleasesEnable = True
 
 def returnLanguage(language):
     return translation('prettycode', path, [language]).gettext
