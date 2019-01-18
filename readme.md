@@ -11,6 +11,7 @@ Pretty looking IDE for [Betaboard](https://github.com/betaboard) development and
 - Jedi
 - QtModern
 - PyYaml
+- Requests
 
 ## Running
 
