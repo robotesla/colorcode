@@ -29,7 +29,6 @@ class ProjectCreationWindow(QWizard):
         self.projectInformationPage = QWizardPage()
         layout = QVBoxLayout()
         self.projectInformationPage.setTitle(_('Project Information'))
-        self.projectInformationPage.setSubTitle(_('Let us know about your project.'))
         
         projectNameLabel = QLabel(_('Project Name:'))
         layout.addWidget(projectNameLabel)
@@ -55,7 +54,7 @@ class ProjectCreationWindow(QWizard):
         self.setupPages()
         self.setWindowTitle(_('New Project'))
         self.setMinimumSize(450, 500)
-        self.setWizardStyle(QWizard.AeroStyle)
+        self.setWizardStyle(QWizard.ModernStyle)
         self.finished.connect(self.finishCreation)
 
     def finishCreation(self):
