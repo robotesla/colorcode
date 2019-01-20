@@ -17,33 +17,42 @@ class ProjectCreationWindow(QWizard):
         # introduction
         self.introductionPage = QWizardPage()
         self.introductionPage.setTitle(_('Introduction'))
-
-        label = QLabel(_('This wizard will help you create a new project. Indicate his name and target platform.'))
-        label.setWordWrap(True)
+        self.introductionPage.setSubTitle(_('This wizard will help you create a new project. Indicate his name and target platform.'))
 
         layout = QVBoxLayout()
-        layout.addWidget(label)
         self.introductionPage.setLayout(layout)
         
         # general
         self.projectInformationPage = QWizardPage()
         layout = QVBoxLayout()
         self.projectInformationPage.setTitle(_('Project Information'))
+        self.projectInformationPage.setSubTitle(_('Let us know something about your project.'))
         
+        projectIdentifierLabel = QLabel(_('Project Identifier:'))
+        projectIdentifierEdit = QLineEdit()
+        projectIdentifierEdit.setReadOnly(True)
+        projectIdentifierEdit.setText('app.unknown.untitled')
+        projectIdentifierLabel.setBuddy(projectIdentifierEdit)
+
         projectNameLabel = QLabel(_('Project Name:'))
-        layout.addWidget(projectNameLabel)
         projectNameEdit = QLineEdit()
-        layout.addWidget(projectNameEdit)
+        projectNameEdit.textChanged.connect(lambda: projectIdentifierEdit.setText('app.unknown.' + projectNameEdit.text().lower().replace(' ', '-')))
         projectNameEdit.setPlaceholderText(_('My Project'))
+        projectNameEdit.setText(_('My Project'))
         projectNameLabel.setBuddy(projectNameEdit)
 
         targetPlatformLabel = QLabel(_('Target Platform:'))
-        layout.addWidget(targetPlatformLabel)
         targetPlatformBox = QComboBox()
-        layout.addWidget(targetPlatformBox)
         targetPlatformBox.addItem('BetaBoard')
         targetPlatformLabel.setBuddy(targetPlatformBox)
         
+        layout.addWidget(projectNameLabel)
+        layout.addWidget(projectNameEdit)
+        layout.addWidget(projectIdentifierLabel)
+        layout.addWidget(projectIdentifierEdit)
+        layout.addWidget(targetPlatformLabel)
+        layout.addWidget(targetPlatformBox)
+
         self.projectInformationPage.setLayout(layout)
 
         # setting pages
@@ -54,8 +63,10 @@ class ProjectCreationWindow(QWizard):
         self.setupPages()
         self.setWindowTitle(_('New Project'))
         self.setMinimumSize(450, 500)
-        self.setWizardStyle(QWizard.ModernStyle)
+
+        from platform import system as currentos
+        self.setWizardStyle(QWizard.MacStyle if currentos() == 'Darwin' else QWizard.AeroStyle)
         self.finished.connect(self.finishCreation)
 
     def finishCreation(self):
-        pass
+        print('Hello!')

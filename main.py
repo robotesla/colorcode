@@ -12,10 +12,7 @@ if __name__ == '__main__':
     from warnings import filterwarnings
     filterwarnings('ignore')
 
-    from settings import returnLanguage, language, darkThemeEnable
-    from qtmodern.styles import dark
-    
-    if darkThemeEnable == True: dark(app)
+    from settings import returnLanguage, language
     _ = returnLanguage(language)
 
     from resources import __resourcesDirectory__

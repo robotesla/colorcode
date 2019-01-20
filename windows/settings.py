@@ -35,11 +35,6 @@ class PreferencesWindow(QDialog):
         self.autoCompleteCheck.setChecked(autoCompleteEnable)
         interfaceWidget.layout().addWidget(self.autoCompleteCheck)
 
-        self.darkThemeCheck = QCheckBox(_('Use Dark Theme'))
-        self.darkThemeCheck.setEnabled(False)
-        self.darkThemeCheck.setChecked(darkThemeEnable)
-        interfaceWidget.layout().addWidget(self.darkThemeCheck)
-
         self.languageBox = QComboBox()
         
         from settings import languages
@@ -56,9 +51,9 @@ class PreferencesWindow(QDialog):
         personalWidget.layout().addStretch(1)
 
         self.authorNameEdit = QLineEdit()
-        self.authorNameEdit.setPlaceholderText(_('John'))
+        self.authorNameEdit.setPlaceholderText(_('johnsmith2000'))
         self.authorNameEdit.setText(name)
-        personalWidget.layout().addWidget(QLabel(_('Name:')))
+        personalWidget.layout().addWidget(QLabel(_('Nickname:')))
         personalWidget.layout().addWidget(self.authorNameEdit)
 
         self.authorEmailEdit = QLineEdit()

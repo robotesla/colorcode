@@ -22,8 +22,8 @@ class QCodeEdit(QTextEdit):
 
         self.setFont(font)
 
-        from settings import autoCompleteEnable, darkThemeEnable
-        self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px' if darkThemeEnable == True else 'color: white; padding: 10px; background: #6E6E6E; border-radius: 0px')
+        from settings import autoCompleteEnable
+        self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
         
         self.setPlaceholderText('Maybe, you should write a couple of lines of code here...')
         self.setTabStopDistance(35)
@@ -34,8 +34,6 @@ class QCodeEdit(QTextEdit):
 
         self.completionsTimer = QTimer(self, interval=750, timeout=self.makeCompletions)
 
-        # uncomment to use autocomplete
-        # but, now it's very unstable
         if autoCompleteEnable == True: self.completionsTimer.start()
 
     def setCompleter(self, c):

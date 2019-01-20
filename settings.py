@@ -14,7 +14,6 @@ for language in listdir(path):
     languages.append(language)
 
 language = settings.value('interface/language', 'en_EN')
-darkThemeEnable = True if settings.value('interface/darkThemeEnable', 'true') == 'true' else False
 toolBarEnable = True if settings.value('interface/toolBarEnable', 'true') == 'true' else False
 buttomPanelEnable = True if settings.value('interface/buttomPanelEnable', 'false') == 'true' else False
 statusBarEnable = True if settings.value('interface/statusBarEnable', 'true') == 'true' else False

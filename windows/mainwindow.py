@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
     def setupMenubar(self):
         self.statusBar().showMessage(_('Setting-up menubar...'))
         
-        styleSheet = 'color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px;'
+        styleSheet = 'color: white; background: #3A3935; border-radius: 0px; min-height: 25px; spacing: 18px'
         self.menuBar().setStyleSheet(styleSheet)
         
         fileMenu = self.menuBar().addMenu(_('File'))
