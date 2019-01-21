@@ -1,7 +1,7 @@
 from PySide2.QtCore import QCoreApplication
 from settings import preReleasesEnable
 
-def checkUpdatesAvailabe():
+def checkUpdatesAvailable():
     from requests import get
     releasesInformation = get('https://api.github.com/repos/ketsu8/prettycode/releases').json()
     
