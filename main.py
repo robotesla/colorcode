@@ -35,8 +35,8 @@ if __name__ == '__main__':
         while time() < t + 0.2:
             app.processEvents()
     
-    from updates import checkUpdatesAvailabe
-    if checkUpdatesAvailabe() == True: print('Update available.')
+    from updates import checkUpdatesAvailable
+    if checkUpdatesAvailable() == True: print('Update available.')
 
     window = MainWindow()
     window.setMinimumSize(300, 400)
