@@ -9,7 +9,6 @@ Pretty looking IDE for [Betaboard](https://github.com/betaboard) development and
 - Pip
 - PySide2
 - Jedi
-- QtModern
 - PyYaml
 - Requests
 
