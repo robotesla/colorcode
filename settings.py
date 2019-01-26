@@ -5,7 +5,8 @@ from sys import argv
 
 from PySide2.QtCore import QSettings
 
-path = join(dirname(argv[0]), 'translations')
+path = dirname(argv[0])
+translations_path = join(path, 'translations')
 settings = QSettings('settings.ini', QSettings.IniFormat)
 
 languages = []
@@ -24,4 +25,4 @@ country = settings.value('personal/country', 'Russia')
 preReleasesEnable = True
 
 def returnLanguage(language):
-    return translation('prettycode', path, [language]).gettext
+    return translation('prettycode', translations_path, [language]).gettext

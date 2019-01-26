@@ -2,7 +2,6 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-from resources import __resourcesDirectory__
 from settings import *
 
 _ = returnLanguage(language)

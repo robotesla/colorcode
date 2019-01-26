@@ -1,2 +1,3 @@
-from os.path import split
-__resourcesDirectory__ = split(__file__)[0] + '/'
+from settings import path
+from os.path import join
+__resourcesDirectory__ = join(path, 'resources')

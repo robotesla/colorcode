@@ -16,7 +16,7 @@ if __name__ == '__main__':
     _ = returnLanguage(language)
 
     from resources import __resourcesDirectory__
-    splashPicture = QPixmap(__resourcesDirectory__ + 'splash.png')
+    splashPicture = QPixmap(__resourcesDirectory__ + '/splash.png')
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
     splashScreen.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
     splashScreen.setEnabled(False)
