@@ -12,7 +12,7 @@ class ProjectCreationWindow(QWizard):
         self.setupUI()
 
     def setupPages(self):
-
+        
         # introduction
         self.introductionPage = QWizardPage()
         self.introductionPage.setTitle(_('Introduction'))
@@ -65,7 +65,7 @@ class ProjectCreationWindow(QWizard):
         self.setMinimumSize(450, 500)
 
         from platform import system as currentos
-        self.setWizardStyle(QWizard.MacStyle if currentos() == 'Darwin' else (QWizard.AeroStyle if currentos() == 'Windows' else QWizard.ModernStyle))
+        self.setWizardStyle(QWizard.ModernStyle)
         self.finished.connect(self.finishCreation)
 
     def finishCreation(self):

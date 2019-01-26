@@ -2,3 +2,4 @@ pyside2
 jedi
 pyyaml
 requests
+qtmodern

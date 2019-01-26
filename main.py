@@ -15,6 +15,9 @@ if __name__ == '__main__':
     from settings import returnLanguage, language
     _ = returnLanguage(language)
 
+    from qtmodern.styles import dark
+    dark(app)
+
     from resources import __resourcesDirectory__
     splashPicture = QPixmap(__resourcesDirectory__ + '/splash.png')
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
