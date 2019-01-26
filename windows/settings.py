@@ -83,7 +83,6 @@ class PreferencesWindow(QDialog):
 
     def saveSettings(self):
         settings.setValue('interface/language', self.languageBox.currentText())
-        settings.setValue('interface/darkThemeEnable', self.darkThemeCheck.isChecked())
         settings.setValue('interface/toolBarEnable', self.toolbarCheck.isChecked())
         settings.setValue('interface/buttomPanelEnable', self.buttomPanelCheck.isChecked())
         settings.setValue('interface/statusBarEnable', self.statusBarCheck.isChecked())
