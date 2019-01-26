@@ -19,7 +19,8 @@ toolBarEnable = True if settings.value('interface/toolBarEnable', 'true') == 'tr
 buttomPanelEnable = True if settings.value('interface/buttomPanelEnable', 'false') == 'true' else False
 statusBarEnable = True if settings.value('interface/statusBarEnable', 'true') == 'true' else False
 autoCompleteEnable = True if settings.value('interface/autoCompleteEnable', 'false') == 'true' else False
-name = settings.value('personal/name', '')
+from random import choice, randint
+name = settings.value('personal/name', '{alias}user{id}'.format(alias=choice(['super', 'mega', 'ultimate', 'alpha', 'beta', 'ultra']), id=str(randint(100000, 999999))))
 email = settings.value('personal/email', '')
 country = settings.value('personal/country', 'Russia')
 preReleasesEnable = True
