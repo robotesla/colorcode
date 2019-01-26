@@ -10,7 +10,7 @@ translations_path = join(path, 'translations')
 settings = QSettings('settings.ini', QSettings.IniFormat)
 
 languages = []
-for language in listdir(path):
+for language in listdir(translations_path):
     if language.startswith('__'): continue
     languages.append(language)
 
