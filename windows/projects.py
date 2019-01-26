@@ -35,7 +35,8 @@ class ProjectCreationWindow(QWizard):
 
         projectNameLabel = QLabel(_('Project Name:'))
         projectNameEdit = QLineEdit()
-        projectNameEdit.textChanged.connect(lambda: projectIdentifierEdit.setText('app.unknown.' + projectNameEdit.text().lower().replace(' ', '-')))
+        from settings import name
+        projectNameEdit.textChanged.connect(lambda: projectIdentifierEdit.setText('app.{author}.{name}'.format(name=projectNameEdit.text(), author=name).lower().replace(' ', '-')))
         projectNameEdit.setPlaceholderText(_('My Project'))
         projectNameEdit.setText(_('My Project'))
         projectNameLabel.setBuddy(projectNameEdit)
@@ -64,7 +65,7 @@ class ProjectCreationWindow(QWizard):
         self.setMinimumSize(450, 500)
 
         from platform import system as currentos
-        self.setWizardStyle(QWizard.MacStyle if currentos() == 'Darwin' else QWizard.AeroStyle)
+        self.setWizardStyle(QWizard.MacStyle if currentos() == 'Darwin' else (QWizard.AeroStyle if currentos() == 'Windows' else QWizard.ModernStyle))
         self.finished.connect(self.finishCreation)
 
     def finishCreation(self):
