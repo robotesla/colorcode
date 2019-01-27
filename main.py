@@ -4,7 +4,7 @@ from PySide2.QtWidgets import *
 from windows.mainwindow import MainWindow
 
 if __name__ == '__main__':
-    QCoreApplication.setApplicationName('Prettycode')
+    QCoreApplication.setApplicationName('Colorcode')
     QCoreApplication.setOrganizationName('Ketsu8')
     QCoreApplication.setApplicationVersion('0.0.1.1')
     app = QApplication([])
