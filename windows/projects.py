@@ -50,7 +50,7 @@ class ProjectCreationWindow(QWizard):
         
         targetPlatformLabel = QLabel(_('Target Platform:'))
         targetPlatformBox = QComboBox()
-        targetPlatformBox.addItem('BetaBoard')
+        targetPlatformBox.addItem('Colorboard')
         targetPlatformLabel.setBuddy(targetPlatformBox)
         
         watchfaceAppCheck = QCheckBox(_('Allow Watchfacing'))
