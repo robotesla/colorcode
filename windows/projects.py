@@ -12,13 +12,13 @@ class ProjectCreationWindow(QWizard):
         self.setupUI()
 
     def setupPages(self):
-        
+
         # introduction
         self.introductionPage = QWizardPage()
         self.introductionPage.setTitle(_('Introduction'))
-        self.introductionPage.setSubTitle(_('This wizard will help you create a new project. Indicate his name and target platform.'))
 
         layout = QVBoxLayout()
+        layout.addWidget(QLabel(_('This wizard will help you create a new . Indicate his name and target platform.')))
         self.introductionPage.setLayout(layout)
         
         # general
@@ -27,31 +27,45 @@ class ProjectCreationWindow(QWizard):
         self.projectInformationPage.setTitle(_('Project Information'))
         self.projectInformationPage.setSubTitle(_('Let us know something about your project.'))
         
-        projectIdentifierLabel = QLabel(_('Project Identifier:'))
-        projectIdentifierEdit = QLineEdit()
-        projectIdentifierEdit.setReadOnly(True)
-        projectIdentifierEdit.setText('app.unknown.untitled')
-        projectIdentifierLabel.setBuddy(projectIdentifierEdit)
+        identifierLabel = QLabel(_('Identifier:'))
+        identifierEdit = QLineEdit()
+        identifierEdit.setReadOnly(True)
+        identifierLabel.setBuddy(identifierEdit)
 
-        projectNameLabel = QLabel(_('Project Name:'))
-        projectNameEdit = QLineEdit()
+        nameLabel = QLabel(_('Name:'))
+        nameEdit = QLineEdit()
         from settings import name
-        projectNameEdit.textChanged.connect(lambda: projectIdentifierEdit.setText('app.{author}.{name}'.format(name=projectNameEdit.text(), author=name).lower().replace(' ', '-')))
-        projectNameEdit.setPlaceholderText(_('My Project'))
-        projectNameEdit.setText(_('My Project'))
-        projectNameLabel.setBuddy(projectNameEdit)
+        nameEdit.textChanged.connect(lambda: identifierEdit.setText('app.{author}.{name}'.format(name=nameEdit.text(), author=name).lower().replace(' ', '-')))
+        nameEdit.setText(_('My Project'))
+        nameEdit.setPlaceholderText(_('My Project'))
+        nameLabel.setBuddy(nameEdit)
 
+        descriptionLabel = QLabel(_('Description:'))
+        descriptionEdit = QTextEdit(_('Yet another project.'))
+        descriptionLabel.setBuddy(descriptionEdit)
+
+        fpsLabel = QLabel(_('FPS:'))
+        fpsEdit = QLineEdit('15')
+        fpsLabel.setBuddy(fpsEdit)
+        
         targetPlatformLabel = QLabel(_('Target Platform:'))
         targetPlatformBox = QComboBox()
         targetPlatformBox.addItem('BetaBoard')
         targetPlatformLabel.setBuddy(targetPlatformBox)
         
-        layout.addWidget(projectNameLabel)
-        layout.addWidget(projectNameEdit)
-        layout.addWidget(projectIdentifierLabel)
-        layout.addWidget(projectIdentifierEdit)
+        watchfaceAppCheck = QCheckBox(_('Allow Watchfacing'))
+
+        layout.addWidget(nameLabel)
+        layout.addWidget(nameEdit)
+        layout.addWidget(identifierLabel)
+        layout.addWidget(identifierEdit)
+        layout.addWidget(fpsLabel)
+        layout.addWidget(fpsEdit)
         layout.addWidget(targetPlatformLabel)
         layout.addWidget(targetPlatformBox)
+        layout.addWidget(descriptionLabel)
+        layout.addWidget(descriptionEdit)
+        layout.addWidget(watchfaceAppCheck)
 
         self.projectInformationPage.setLayout(layout)
 
@@ -61,12 +75,12 @@ class ProjectCreationWindow(QWizard):
     
     def setupUI(self):
         self.setupPages()
-        self.setWindowTitle(_('New Project'))
+        self.setWindowTitle(_('Project Creation'))
         self.setMinimumSize(450, 500)
 
         from platform import system as currentos
         self.setWizardStyle(QWizard.ModernStyle)
-        self.finished.connect(self.finishCreation)
+        self.accepted.connect(self.finishCreation)
 
     def finishCreation(self):
         print('Hello!')
