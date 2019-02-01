@@ -45,11 +45,6 @@ class ProjectCreationWindow(QWizard):
         fpsEdit = QLineEdit('15')
         fpsLabel.setBuddy(fpsEdit)
         
-        targetPlatformLabel = QLabel(_('Target Platform:'))
-        targetPlatformBox = QComboBox()
-        targetPlatformBox.addItem('Colorboard')
-        targetPlatformLabel.setBuddy(targetPlatformBox)
-        
         watchfaceAppCheck = QCheckBox(_('Allow Watchfacing'))
 
         layout.addWidget(nameLabel)
@@ -58,8 +53,6 @@ class ProjectCreationWindow(QWizard):
         layout.addWidget(identifierEdit)
         layout.addWidget(fpsLabel)
         layout.addWidget(fpsEdit)
-        layout.addWidget(targetPlatformLabel)
-        layout.addWidget(targetPlatformBox)
         layout.addWidget(descriptionLabel)
         layout.addWidget(descriptionEdit)
         layout.addWidget(watchfaceAppCheck)
