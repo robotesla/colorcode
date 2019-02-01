@@ -28,7 +28,6 @@ if __name__ == '__main__':
     progressBar.setMaximum(10)
     progressBar.setTextVisible(False)
     progressBar.setGeometry(160, 250, 200, 20)
-    splashScreen.showMessage(_('Version: {version}').format(version='<b>' + QCoreApplication.applicationVersion() + '</b>'), Qt.AlignBottom | Qt.AlignRight, Qt.white)
     splashScreen.show()
 
     from time import time
