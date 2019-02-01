@@ -70,6 +70,16 @@ class PreferencesWindow(QDialog):
 
         self.tabWidget.addTab(personalWidget, _('Personal'))
 
+        updatesWidget = QWidget()
+        updatesWidget.setLayout(QVBoxLayout())
+        updatesWidget.layout().addStretch(1)
+
+        self.preReleasesEnableCheck = QCheckBox(_('Allow pre-releases'))
+        self.preReleasesEnableCheck.setChecked(preReleasesEnable)
+        updatesWidget.layout().addWidget(self.preReleasesEnableCheck)
+
+        self.tabWidget.addTab(updatesWidget, _('Updates'))
+
     def setupDialogButtonBox(self):
         self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
         self.buttonBox.accepted.connect(self.saveSettings)
@@ -91,6 +101,8 @@ class PreferencesWindow(QDialog):
         settings.setValue('personal/name', self.authorNameEdit.text())
         settings.setValue('personal/email', self.authorEmailEdit.text())
         settings.setValue('personal/country', self.countryBox.currentText())
+
+        settings.setValue('updates/allowPreReleases', self.preReleasesEnableCheck.isChecked())
         settings.sync()
         
         QMessageBox.information(self, _('Saving Settings'), _('Preferences successfuly saved. Application needs reload.'))
