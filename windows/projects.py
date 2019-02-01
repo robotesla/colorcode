@@ -12,8 +12,6 @@ class ProjectCreationWindow(QWizard):
         self.setupUI()
 
     def setupPages(self):
-
-        # introduction
         self.introductionPage = QWizardPage()
         self.introductionPage.setTitle(_('Introduction'))
 
@@ -21,7 +19,6 @@ class ProjectCreationWindow(QWizard):
         layout.addWidget(QLabel(_('This wizard will help you create a new . Indicate his name and target platform.')))
         self.introductionPage.setLayout(layout)
         
-        # general
         self.projectInformationPage = QWizardPage()
         layout = QVBoxLayout()
         self.projectInformationPage.setTitle(_('Project Information'))
@@ -69,7 +66,6 @@ class ProjectCreationWindow(QWizard):
 
         self.projectInformationPage.setLayout(layout)
 
-        # setting pages
         self.addPage(self.introductionPage)
         self.addPage(self.projectInformationPage)
     
