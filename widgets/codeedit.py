@@ -7,6 +7,8 @@ from PySide2.QtWidgets import *
 
 from jedi import Script
 
+from settings import returnLanguage, language
+_ = returnLanguage(language)
 
 class QCodeEdit(QPlainTextEdit):
     def __init__(self, parent=None):
