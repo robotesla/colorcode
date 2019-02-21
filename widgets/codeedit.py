@@ -8,7 +8,7 @@ from PySide2.QtWidgets import *
 from jedi import Script
 
 
-class QCodeEdit(QTextEdit):
+class QCodeEdit(QPlainTextEdit):
     def __init__(self, parent=None):
         super(QCodeEdit, self).__init__(parent)
 
