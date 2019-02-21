@@ -15,12 +15,10 @@ class ProjectCreationWindow(QWizard):
         self.introductionPage = QWizardPage()
         self.introductionPage.setTitle(_('Introduction'))
 
-        layout = QVBoxLayout()
-        layout.addWidget(QLabel(_('This wizard will help you create a new . Indicate his name and target platform.')))
-        self.introductionPage.setLayout(layout)
+        self.introductionPage.setLayout(QVBoxLayout())
+        self.introductionPage.layout().addWidget(QLabel(_('This wizard will help you create a new . Indicate his name and target platform.')))
         
         self.projectInformationPage = QWizardPage()
-        layout = QVBoxLayout()
         self.projectInformationPage.setTitle(_('Project Information'))
         self.projectInformationPage.setSubTitle(_('Let us know something about your project.'))
         
@@ -47,17 +45,17 @@ class ProjectCreationWindow(QWizard):
         
         watchfaceAppCheck = QCheckBox(_('Allow Watchfacing'))
 
-        layout.addWidget(nameLabel)
-        layout.addWidget(nameEdit)
-        layout.addWidget(identifierLabel)
-        layout.addWidget(identifierEdit)
-        layout.addWidget(fpsLabel)
-        layout.addWidget(fpsEdit)
-        layout.addWidget(descriptionLabel)
-        layout.addWidget(descriptionEdit)
-        layout.addWidget(watchfaceAppCheck)
 
-        self.projectInformationPage.setLayout(layout)
+        self.projectInformationPage.setLayout(QVBoxLayout())
+        self.projectInformationPage.layout().addWidget(nameLabel)
+        self.projectInformationPage.layout().addWidget(nameEdit)
+        self.projectInformationPage.layout().addWidget(identifierLabel)
+        self.projectInformationPage.layout().addWidget(identifierEdit)
+        self.projectInformationPage.layout().addWidget(fpsLabel)
+        self.projectInformationPage.layout().addWidget(fpsEdit)
+        self.projectInformationPage.layout().addWidget(descriptionLabel)
+        self.projectInformationPage.layout().addWidget(descriptionEdit)
+        self.projectInformationPage.layout().addWidget(watchfaceAppCheck)
 
         self.addPage(self.introductionPage)
         self.addPage(self.projectInformationPage)
