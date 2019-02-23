@@ -28,7 +28,7 @@ class QCodeEdit(QPlainTextEdit):
         self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
         
         self.setPlaceholderText(_('Maybe, you should write a couple of lines of code here...'))
-        self.setTabStopDistance(35)
+        self.setTabStopWidth(35)
         self.setPlainText('from matrix import *\n\ndef setup():\n\tpass\n\ndef frame():\n\tpass')
 
         from widgets.highlight import PythonHighlighter
