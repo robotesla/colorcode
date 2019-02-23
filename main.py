@@ -1,19 +1,22 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
+from settings import language, returnLanguage
 from windows.mainwindow import MainWindow
 
-if __name__ == '__main__':
+_ = returnLanguage(language)
+
+def init():
     QCoreApplication.setApplicationName('Colorcode')
     QCoreApplication.setOrganizationName('Ketsu8')
     QCoreApplication.setApplicationVersion('0.0.1.1')
     app = QApplication([])
 
+    if qVersion() == '5.9.4': raise Exception(_('Qt version is too high and incompatible.'))
+
     from warnings import filterwarnings
     filterwarnings('ignore')
-
-    from settings import returnLanguage, language
-    _ = returnLanguage(language)
 
     from qtmodern.styles import dark
     dark(app)
@@ -46,3 +49,17 @@ if __name__ == '__main__':
     window.show()
     splashScreen.finish(window)
     app.exec_()
+
+if __name__ == '__main__':
+    try:
+        init()
+    except Exception as exception:
+        messageBox = QMessageBox()
+        messageBox.setText(_('Initialization error'))
+        messageBox.setInformativeText(_('The error that occurred caused the program to stop working.'))
+        messageBox.setStandardButtons(QMessageBox.Close)
+        messageBox.setDefaultButton(QMessageBox.Close)
+        messageBox.setIcon(QMessageBox.Warning)
+        messageBox.setDetailedText(str(exception))
+        messageBox.exec()
+        QApplication.quit()
