@@ -8,7 +8,7 @@ Pretty looking IDE for [Colorboard](https://github.com/colorboard) development a
 
 - Python: [3.6.7](https://www.python.org/downloads/release/python-367/)
 - Pip
-- PySide2
+- PySide2: 5.9.0a1
 - Jedi
 - PyYaml
 - Requests
