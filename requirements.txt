@@ -1,4 +1,4 @@
-pyside2
+pyside2==5.9.0a1
 jedi
 pyyaml
 requests
