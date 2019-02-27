@@ -6,11 +6,12 @@ from settings import language, returnLanguage
 from windows.mainwindow import MainWindow
 
 _ = returnLanguage(language)
+__version__ = '0.0.1.1'
 
 def init():
     QCoreApplication.setApplicationName('Colorcode')
     QCoreApplication.setOrganizationName('Ketsu8')
-    QCoreApplication.setApplicationVersion('0.0.1.1')
+    QCoreApplication.setApplicationVersion(__version__)
     app = QApplication([])
 
     if qVersion() != '5.9.4': raise Exception(_('Qt version is too high and incompatible.'))
