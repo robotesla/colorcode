@@ -7,9 +7,10 @@ from windows.mainwindow import MainWindow
 
 _ = returnLanguage(language)
 __version__ = '0.0.1.1'
+__title__ = 'Colorcode'
 
 def init():
-    QCoreApplication.setApplicationName('Colorcode')
+    QCoreApplication.setApplicationName(__title__)
     QCoreApplication.setOrganizationName('Ketsu8')
     QCoreApplication.setApplicationVersion(__version__)
     app = QApplication([])
