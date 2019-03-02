@@ -37,11 +37,12 @@ class MainWindow(QMainWindow):
         self.addToolBar(Qt.LeftToolBarArea, self.toolbar)
         self.toolbar.setMovable(False)
 
-        self.toolbar.addAction(QIcon(__resourcesDirectory__ + '/icons/run.png'), _('Build and Run'))
-        self.toolbar.addAction(QIcon(__resourcesDirectory__ + '/icons/package.png'), _('Build in package'))
-        self.toolbar.addAction(QIcon(__resourcesDirectory__ + '/icons/settings.png'), _('Project Settings'))
-        self.toolbar.addAction(QIcon(__resourcesDirectory__ + '/icons/open.png'), _('Open Project'))
-        self.toolbar.addAction(QIcon(__resourcesDirectory__ + '/icons/save.png'), _('Save Project'))
+        from os.path import join
+        self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'run.png')), _('Build and Run'))
+        self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'package.png')), _('Build in package'))
+        self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'settings.png')), _('Project Settings'))
+        self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'open.png')), _('Open Project'))
+        self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'save.png')), _('Save Project'))
 
     def setupButtomPanel(self):
         self.statusBar().showMessage(_('Setting-up buttom panel...'))

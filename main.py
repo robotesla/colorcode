@@ -24,7 +24,8 @@ def init():
     dark(app)
 
     from resources import __resourcesDirectory__
-    splashPicture = QPixmap(__resourcesDirectory__ + '/splash.png')
+    from os.path import join
+    splashPicture = QPixmap(join(__resourcesDirectory__, 'splash.png'))
     splashScreen = QSplashScreen(splashPicture, Qt.WindowStaysOnTopHint)
     splashScreen.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
     splashScreen.setEnabled(False)
@@ -63,5 +64,6 @@ if __name__ == '__main__':
         messageBox.setDefaultButton(QMessageBox.Close)
         messageBox.setIcon(QMessageBox.Warning)
         messageBox.setDetailedText(str(exception))
+        messageBox.resize(400, 500)
         messageBox.exec()
         QApplication.quit()
