@@ -15,8 +15,6 @@ def init():
     QCoreApplication.setApplicationVersion(__version__)
     app = QApplication([])
 
-    if qVersion() != '5.9.4': raise Exception(_('Qt version is too high and incompatible.'))
-
     from warnings import filterwarnings
     filterwarnings('ignore')
 
