@@ -18,6 +18,7 @@ class PreferencesWindow(QDialog):
         interfaceWidget.setLayout(QVBoxLayout())
         interfaceWidget.layout().addStretch(1)
 
+        '''
         self.toolbarCheck = QCheckBox(_('Visible Toolbar'))
         self.toolbarCheck.setChecked(toolBarEnable)
         interfaceWidget.layout().addWidget(self.toolbarCheck)
@@ -29,6 +30,7 @@ class PreferencesWindow(QDialog):
         self.statusBarCheck = QCheckBox(_('Visible Status Bar'))
         self.statusBarCheck.setChecked(statusBarEnable)
         interfaceWidget.layout().addWidget(self.statusBarCheck)
+        '''
 
         self.autoCompleteCheck = QCheckBox(_('Enable Auto Complete (Beta)'))
         self.autoCompleteCheck.setChecked(autoCompleteEnable)
@@ -45,6 +47,7 @@ class PreferencesWindow(QDialog):
 
         self.tabWidget.addTab(interfaceWidget, _('Interface'))
 
+        '''
         personalWidget = QWidget()
         personalWidget.setLayout(QVBoxLayout())
         personalWidget.layout().addStretch(1)
@@ -79,6 +82,7 @@ class PreferencesWindow(QDialog):
         updatesWidget.layout().addWidget(self.preReleasesEnableCheck)
 
         self.tabWidget.addTab(updatesWidget, _('Updates'))
+        '''
 
     def setupDialogButtonBox(self):
         self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
@@ -93,10 +97,12 @@ class PreferencesWindow(QDialog):
 
     def saveSettings(self):
         settings.setValue('interface/language', self.languageBox.currentText())
+        settings.setValue('interface/autoCompleteEnable', self.autoCompleteCheck.isChecked())
+
+        '''
         settings.setValue('interface/toolBarEnable', self.toolbarCheck.isChecked())
         settings.setValue('interface/buttomPanelEnable', self.buttomPanelCheck.isChecked())
         settings.setValue('interface/statusBarEnable', self.statusBarCheck.isChecked())
-        settings.setValue('interface/autoCompleteEnable', self.autoCompleteCheck.isChecked())
 
         settings.setValue('personal/name', self.authorNameEdit.text())
         settings.setValue('personal/email', self.authorEmailEdit.text())
@@ -104,8 +110,9 @@ class PreferencesWindow(QDialog):
 
         settings.setValue('updates/allowPreReleases', self.preReleasesEnableCheck.isChecked())
         settings.sync()
-        
-        QMessageBox.information(self, _('Saving Settings'), _('Preferences successfuly saved. Application needs reload.'))
+        '''
+
+        QMessageBox.information(self, _('Saving Settings'), _('Preferences successfully saved. Application needs reload.'))
         QApplication.quit()
 
     def setupUI(self):

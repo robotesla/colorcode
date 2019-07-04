@@ -1,4 +1,3 @@
-
 from platform import system as platform
 
 from PySide2.QtCore import *
@@ -16,12 +15,8 @@ class QCodeEdit(QPlainTextEdit):
 
         self._completer = None
         self.lastItems = []
-        
-        font = QFont()
-        font.setFamily('Menlo' if platform() == 'Darwin' else ('Consoleas' if platform() == 'Windows' else 'Courier'))
-        font.setFixedPitch(True)
-        font.setPointSize(13 if platform() == 'Darwin' else 10)
 
+        font = self.getFont()
         self.setFont(font)
 
         from settings import autoCompleteEnable
@@ -37,6 +32,13 @@ class QCodeEdit(QPlainTextEdit):
         self.completionsTimer = QTimer(self, interval=750, timeout=self.makeCompletions)
 
         if autoCompleteEnable == True: self.completionsTimer.start()
+
+    def getFont(self, size=13 if platform() == 'Darwin' else 10):
+        font = QFont()
+        font.setFamily('Menlo' if platform() == 'Darwin' else ('Consoleas' if platform() == 'Windows' else 'Courier'))
+        font.setFixedPitch(True)
+        font.setPointSize(size)
+        return font
 
     def setCompleter(self, c):
         if self._completer is not None:
