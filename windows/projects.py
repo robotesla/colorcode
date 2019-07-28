@@ -6,6 +6,7 @@ from settings import *
 
 _ = returnLanguage(language)
 
+
 class ProjectCreationWindow(QWizard):
     def __init__(self, parent=None):
         super(ProjectCreationWindow, self).__init__(parent)

@@ -6,6 +6,7 @@ from settings import *
 
 _ = returnLanguage(language)
 
+
 class PreferencesWindow(QDialog):
     def __init__(self, parent=None):
         super(PreferencesWindow, self).__init__(parent)
@@ -18,7 +19,6 @@ class PreferencesWindow(QDialog):
         interfaceWidget.setLayout(QVBoxLayout())
         interfaceWidget.layout().addStretch(1)
 
-        '''
         self.toolbarCheck = QCheckBox(_('Visible Toolbar'))
         self.toolbarCheck.setChecked(toolBarEnable)
         interfaceWidget.layout().addWidget(self.toolbarCheck)
@@ -30,7 +30,6 @@ class PreferencesWindow(QDialog):
         self.statusBarCheck = QCheckBox(_('Visible Status Bar'))
         self.statusBarCheck.setChecked(statusBarEnable)
         interfaceWidget.layout().addWidget(self.statusBarCheck)
-        '''
 
         self.autoCompleteCheck = QCheckBox(_('Enable Auto Complete (Beta)'))
         self.autoCompleteCheck.setChecked(autoCompleteEnable)
@@ -47,7 +46,6 @@ class PreferencesWindow(QDialog):
 
         self.tabWidget.addTab(interfaceWidget, _('Interface'))
 
-        '''
         personalWidget = QWidget()
         personalWidget.setLayout(QVBoxLayout())
         personalWidget.layout().addStretch(1)
@@ -82,7 +80,6 @@ class PreferencesWindow(QDialog):
         updatesWidget.layout().addWidget(self.preReleasesEnableCheck)
 
         self.tabWidget.addTab(updatesWidget, _('Updates'))
-        '''
 
     def setupDialogButtonBox(self):
         self.buttonBox = QDialogButtonBox(QDialogButtonBox.Cancel | QDialogButtonBox.Save)
@@ -99,7 +96,6 @@ class PreferencesWindow(QDialog):
         settings.setValue('interface/language', self.languageBox.currentText())
         settings.setValue('interface/autoCompleteEnable', self.autoCompleteCheck.isChecked())
 
-        '''
         settings.setValue('interface/toolBarEnable', self.toolbarCheck.isChecked())
         settings.setValue('interface/buttomPanelEnable', self.buttomPanelCheck.isChecked())
         settings.setValue('interface/statusBarEnable', self.statusBarCheck.isChecked())
@@ -110,7 +106,6 @@ class PreferencesWindow(QDialog):
 
         settings.setValue('updates/allowPreReleases', self.preReleasesEnableCheck.isChecked())
         settings.sync()
-        '''
 
         QMessageBox.information(self, _('Saving Settings'), _('Preferences successfully saved. Application needs reload.'))
         QApplication.quit()

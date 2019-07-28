@@ -9,6 +9,7 @@ _ = returnLanguage(language)
 __version__ = '0.0.1.1'
 __title__ = 'Colorcode'
 
+
 def init():
     QCoreApplication.setApplicationName(__title__)
     QCoreApplication.setOrganizationName('Ketsu8')
@@ -21,7 +22,6 @@ def init():
     from qtmodern.styles import dark
     dark(app)
 
-    '''
     from resources import __resourcesDirectory__
     from os.path import join
     splashPicture = QPixmap(join(__resourcesDirectory__, 'splash.png'))
@@ -44,15 +44,15 @@ def init():
     
     from updates import checkUpdatesAvailable
     if checkUpdatesAvailable() == True: print('Update available.')
-    '''
 
     window = MainWindow()
     window.setMinimumSize(300, 400)
     window.resize(740, 512)
     window.show()
-    # splashScreen.finish(window)
+    splashScreen.finish(window)
 
     app.exec_()
+
 
 if __name__ == '__main__':
     try:
