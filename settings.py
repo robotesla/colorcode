@@ -25,5 +25,6 @@ email = settings.value('personal/email', '')
 country = settings.value('personal/country', 'Russia')
 preReleasesEnable = True if settings.value('updates/allowPreReleases', 'false') == 'true' else False
 
+
 def returnLanguage(language):
     return translation('prettycode', translations_path, [language]).gettext

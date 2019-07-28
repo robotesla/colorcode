@@ -4,7 +4,6 @@ from PySide2.QtWidgets import *
 
 from widgets.codeedit import QCodeEdit
 from windows.settings import PreferencesWindow
-from windows.projects import ProjectCreationWindow
 
 from resources import __resourcesDirectory__
 from platform import system as platform
@@ -40,8 +39,6 @@ class MainWindow(QMainWindow):
 
         from os.path import join
         self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'run.png')), _('Build and Run'))
-        # self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'package.png')), _('Build in package'))
-        # self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'settings.png')), _('Project Settings'))
         self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'open.png')), _('Open Project'))
         self.toolbar.addAction(QIcon(join(__resourcesDirectory__, 'icons', 'save.png')), _('Save Project'))
 
@@ -60,12 +57,6 @@ class MainWindow(QMainWindow):
         self.menuBar().setStyleSheet(styleSheet)
         
         fileMenu = self.menuBar().addMenu(_('File'))
-
-        '''
-        newMenu = fileMenu.addMenu(_('New...'))
-        newMenu.addAction(_('Project'), lambda: ProjectCreationWindow(self).showNormal())
-        '''
-
         fileMenu.addAction(_('Preferences'), lambda: PreferencesWindow(self).showNormal())
         
         editMenu = self.menuBar().addMenu(_('Edit'))
