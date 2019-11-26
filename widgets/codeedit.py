@@ -6,8 +6,6 @@ from PySide2.QtWidgets import *
 
 from jedi import Script
 
-from settings import returnLanguage, language
-_ = returnLanguage(language)
 
 class QCodeEdit(QPlainTextEdit):
     def __init__(self, parent=None):
@@ -19,10 +17,9 @@ class QCodeEdit(QPlainTextEdit):
         font = self.getFont()
         self.setFont(font)
 
-        from settings import autoCompleteEnable
         self.setStyleSheet('color: white; padding: 10px; background: #1E1E1E; border-radius: 0px')
         
-        self.setPlaceholderText(_('Maybe, you should write a couple of lines of code here...'))
+        self.setPlaceholderText('Maybe, you should write a couple of lines of code here...')
         self.setTabStopWidth(35)
         self.setPlainText('from matrix import *\n\ndef setup():\n\tpass\n\ndef frame():\n\tpass')
 
@@ -31,7 +28,7 @@ class QCodeEdit(QPlainTextEdit):
 
         self.completionsTimer = QTimer(self, interval=750, timeout=self.makeCompletions)
 
-        if autoCompleteEnable == True: self.completionsTimer.start()
+        # self.completionsTimer.start()
 
     def getFont(self, size=13 if platform() == 'Darwin' else 10):
         font = QFont()
